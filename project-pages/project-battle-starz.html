@@ -1,0 +1,84 @@
+<!-- Copyright (C) Rogan Johnston 2025 all rights reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/grid-utils.css">
+    </head>
+    <body>
+
+        <!--Header-->
+        <div id="header"></div>
+        
+        <!-- Page Content -->
+        <div class="content">
+
+            <div id="overveiw"></div>
+            <hr>
+            <div id="project-asset"></div>
+            <hr>
+            <h1>Collaborators</h1>
+            <div class="grid-container" id="collaberators"></div>
+            
+        </div>
+
+        <!--Java Script-->
+        <script src="/scripts/html-generator.js"></script>
+        
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+
+        <script> 
+        const overveiwContents = {
+            projectName: "Battle Starz",
+            discripton: "My team and I (Team 3) created this game for a school project at Vancouver Film School. For this project I took on the roles of project manager and level designer.",
+            videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
+        }
+        populateElement({elementId: "overveiw", filePath: "/templates-html/project-overveiw.html", data: overveiwContents})
+        </script>
+        
+        <script>
+        const assetContents = {
+            assetName: "Battle Arena",
+            situation: "Battle Starz is a PvP twin stick shooter with it's core gameplay element being portals that can teleport your shuriken. We felt this mechanic had potential since it would allow players outplay one another as they looked for the most creative trick shots, but after we set up our game's gym we quickly found that because they added an extra step to hitting your opponent there was no inherit incentive to use them.",
+            task: "So when I set out to make the levels for the game I asked myself how I could design the levels to incentivise players to use the portals in the ways we originally envisioned, and to find new ways to use the protals we hadn't thought of.",
+            firstDraft: "/media/battle-starz/level-layout.png",
+            action: "This is the layout for one of the levels I made. For this level I tried to devide the two starting positions for the players so they they would stay on opposite sides of the arena, but also so that they would have complete cover from straight shots at them. This meant that their only really hope of hitting the other player was a hail mary, or using the portals to hit the other player in a way they weren't expecting.",
+            finalDraft: "/media/battle-starz/level-example.gif",
+            result: "In the end I didn't have the time to iterate on the levels as much as I would have liked. It was a small project and instead of polishing one level we decided it was more important to have a handful of levels that showed of different portal dynamics as they played. I think this level turned out well though considering it was mostly the same from the first draft. It gave a feeling of trying to manage where your opponent could hit you from while trying to figure out which portal could catch them off guard which I think exemplified the feeling of trick shots that we wanted out game to have.",
+        }
+
+        populateElement({elementId: "project-asset", filePath: "/templates-html/project-asset.html", data: assetContents})
+        </script>
+
+        <script> 
+        const gridItems = [
+            {
+                link: "https://www.linkedin.com/in/samuel-c-english/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Sam English",
+                role: "Programmer"
+            },
+            {
+                link: "https://www.linkedin.com/in/nic-seymour/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Nic Seymour",
+                role: "Artist"
+            },
+            {
+                link: "www.linkedin.com",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Steven",
+                role: "UI Programmer"
+            },
+            {
+                link: "https://www.linkedin.com/in/nicholas-perrott-a89471198/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Nick Perott",
+                role: "QA"
+            }
+        ];
+        populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems }) 
+        </script>
+    </body>
+</html> 

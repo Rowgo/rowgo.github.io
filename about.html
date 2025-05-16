@@ -1,0 +1,61 @@
+<!-- Copyright (C) Rogan Johnston 2025 all rights reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/grid.css">
+    </head>
+    <body>
+        <!--Header-->
+        <div id="header"></div>
+        <div class="content">
+            <use href="#header"/>
+            <h1>About</h1>
+            <div>
+                <p>
+                    When I was a kid my three brothers and I would play games in the basement of my child hood home, so often we would have a full four players.
+                    During that time I found the first job I wanted to have when I got older, being a 'game maker'. 
+                <br style="margin-bottom: 0.5em">
+                    This made me really interested in game design growing up, and at one point I had watched every video that had been published by the extra credits youtube channel.
+                    I also kept up to date on all of forum and blog posts behind the latest changes that Riot Games had made for League of Legends.
+                <br style="margin-bottom: 0.5em">
+                    This knowledge shaped my perceptions growing up, and it's convinced me that game design is applicable to many feilds such as education through teaching with level design, and buisness through icentives using systems design.
+                <br style="margin-bottom: 0.5em">
+                    To learn more about game design I went to school at Vancouver Film School for thier game design program. 
+                    There I learned the various softwares that are used to make games, how production for video games is structured, and the hard work that is required to have a game see the light of day.
+                <br style="margin-bottom: 0.5em">
+                    Now that I've graduated I'm learning how to create online multiplayer games using Unreal Engine. 
+                    I hope that learning to make games will help me better understand what play is, the ways we as designers can facilitate it, and how it can make the world a better place.
+                </p>
+            </div>
+            <hr>
+            <div class="flex-space-around" target="_blank">
+                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
+                    <use href="/media/sprites/tool-icons.svg#icon-godot"/>
+                </svg>
+
+                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
+                    <use href="/media/sprites/tool-icons.svg#icon-unity"/>
+                </svg>
+
+                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
+                    <use href="/media/sprites/tool-icons.svg#icon-unreal"/>
+                </svg>
+
+                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
+                    <use href="/media/sprites/tool-icons.svg#icon-blender"/>
+                </svg>
+
+                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
+                    <use href="/media/sprites/tool-icons.svg#icon-inkscape"/>
+                </svg>
+            </div>
+        </div>
+
+        <!--Java Script-->
+        <script src="/scripts/html-generator.js"></script>
+        
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+    </body>
+</html>

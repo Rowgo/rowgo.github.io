@@ -1,0 +1,106 @@
+/* Copyright (C) Rogan Johnston 2025 all rights reserved */
+
+@import url(https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+:root {
+    --colour-background: #F3F5F6;
+    --colour-content: #292F36;
+    --colour-accent: #BD5555;
+
+    --font-primary: 'Poppins', arial, sans-serif;
+    --font-secondary: 'Coustard', georgia, serif;
+
+    --line-thickness: 3px;
+}
+
+/* Page Styles */
+body {
+    font-family: var(--font-primary);
+    font-size: large;
+    line-height: 1.5;
+    background-color: var(--colour-background);
+    color: var(--colour-content);
+    text-align: center;
+}
+hr {
+    border: 0px;
+    border-top: var(--line-thickness) solid var(--colour-content);
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Text Styles */
+h1, h2, h3{
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    color: var(--colour-accent);
+    text-align: center;
+}
+p {
+    font-family: var(--font-primary);
+    color: var(--colour-content);
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    color: var(--colour-content);
+}
+a:hover{
+    color: var(--colour-accent);
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+a img{
+    border:var(--colour-content) solid var(--line-thickness);
+    box-sizing: border-box; /* Ensures padding is included in the item's size */
+}
+a:hover img{
+    border:var(--colour-accent) solid var(--line-thickness);
+}
+
+/* Base Classes */
+
+.content{
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.flex-space-around{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.horizontal-nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+    .horizontal-nav li{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+        .horizontal-nav li:not(:last-child){
+            border-right: var(--colour-content) solid var(--line-thickness);
+        }
+/* 
+Todo: consolodate all of the css I have into one file and make them. 
+        if I want to break the file up for organizational purposes and to make it easier to look through, 
+        then I need to make those files general enough that they would need to be included in any page.
+*/
+ 
+        

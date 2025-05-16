@@ -1,0 +1,78 @@
+<!-- Copyright (C) Rogan Johnston 2025 all rights reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/grid.css">
+    </head>
+    <body>
+
+        <!--Header-->
+        <div id="header"></div>
+        
+        <!-- Page Content -->
+        <div class="content">
+
+            <div id="overveiw"></div>
+            <hr>
+            <div id="project-asset"></div>
+            <hr>
+            <h1>Collaborators</h1>
+            <div class="grid-container" id="collaberators"></div>
+            
+        </div>
+
+
+        <!--Java Script-->
+        <script src="/scripts/html-generator.js"></script>
+        
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+
+        <script> 
+        const overveiwContents = {
+            projectName: "Project Name",
+            discripton: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+            videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
+        }
+        populateElement({elementId: "overveiw", filePath: "/templates-html/project-overveiw.html", data: overveiwContents})
+        </script>
+        
+        <script>
+        const assetContents = {
+            assetName: "My Project Asset",
+            situation: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+            task: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+            firstDraft: "/media/GameplayImage-Placeholder.png",
+            action: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+            finalDraft: "/media/GameplayImage-Placeholder.png",
+            result: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+        }
+        populateElement({elementId: "project-asset", filePath: "/templates-html/project-asset.html", data: assetContents})
+        </script>
+
+        <script> 
+        const gridItems = [
+            {
+                link: "www.linkedin.com",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Full Name",
+                role: "Role"
+            },
+            {
+                link: "www.linkedin.com",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Full Name",
+                role: "Role"
+            },
+            {
+                link: "www.linkedin.com",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Full Name",
+                role: "Role"
+            }
+        ];
+        populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems }) 
+        </script>
+    </body>
+</html> 

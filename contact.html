@@ -1,0 +1,73 @@
+<!-- Copyright (C) Rogan Johnston 2025 all rights reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+
+        <style>
+            a svg{
+                width: 100px;
+                height: 100px;
+                border: var(--colour-content) solid var(--line-thickness);
+                border-radius: 50%;
+            }
+            a:hover svg{
+                border: var(--colour-accent) solid var(--line-thickness);
+            }
+        </style>
+    </head>
+    <body>
+        <!--Header-->
+        <div id="header"></div>
+        <script src="scripts/header.js"></script>
+
+        <div class="content">
+            <h1> Contact Me </h1>
+            <div class="twitch-embed">
+                <p>
+                    I stream on twitch every ___day at __M PST. If I'm streaming right now feel free to ask me anything in the twitch chat.
+                </p>
+                <iframe
+                    src="https://player.twitch.tv/?channel=rowgabear&parent=roganjohnston.com"
+                    height="480"
+                    width="720"
+                    allowfullscreen
+                    frameborder="0">
+                </iframe>
+                <iframe
+                    src="https://www.twitch.tv/embed/rowgabear/chat?parent=roganjohnston.com"
+                    height="480"
+                    width="350"
+                    frameborder="0">
+                </iframe>
+            </div>
+            <hr>
+            <div>
+                <h1> My Socials </h1>
+                <div class="flex-space-around">
+                    <a href="https://www.youtube.com/@roganjohnston" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon">
+                            <use href="/media/sprites/socials-icons.svg#icon-youtube"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.twitch.tv/rowgabear" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon"><use href="/media/sprites/socials-icons.svg#icon-twitch"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/roganjohnston/" target="_blank" rel="noopener noreferrer" >
+                        <svg class="icon">
+                            <use href="/media/sprites/socials-icons.svg#icon-linkedin"/>
+                        </svg>
+                    </a>
+                </div>
+                <p>
+                    If I'm not streaming right now you can contact me through my email or on linkedin. or if you want to see what I'm up to, check out my youtube channel.
+                </p>
+            </div>
+        </div>
+
+        <!--Java Script-->
+        <script src="/scripts/html-generator.js"></script>
+        
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+    </body>
+</html>

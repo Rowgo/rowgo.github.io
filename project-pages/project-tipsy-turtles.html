@@ -1,0 +1,96 @@
+<!-- Copyright (C) Rogan Johnston 2025 all rights reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/grid-utils.css">
+    </head>
+    <body>
+
+        <!--Header-->
+        <div id="header"></div>
+        
+        <!-- Page Content -->
+        <div class="content">
+
+            <div id="overveiw"></div>
+            <hr>
+            <div id="project-asset"></div>
+            <hr>
+            <h1>Collaborators</h1>
+            <div class="grid-container" id="collaberators"></div>
+            
+        </div>
+
+
+        <!--Java Script-->
+        <script src="/scripts/html-generator.js"></script>
+        
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+
+        <script> 
+        const overveiwContents = {
+            projectName: "Tipsy Turtles",
+            discripton: "The Night Crew and I made Tipsy Turtles for our final Vancouver Film School project. For this game I was resposible for designing and implimenting the UI/UX for the game, managing the project, scripting the visual effects, and documenting the game's core mechanics.",
+            videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
+        }
+        populateElement({elementId: "overveiw", filePath: "/templates-html/project-overveiw.html", data: overveiwContents})
+        </script>
+        
+        <script>
+        const assetContents = {
+            assetName: "Fish Bowl UI",
+            situation: "When we first came up with the game we had decided to include saving a fish using a fishbowl to give the player a clear objective, and since the core idea of the game was players working together to overcome obtuse movement controls by co-operating we wanted to add a time pressure element to the game. We thought this would add a push and pull element to the game since players want to take things slow so that they don't make mistakes in controling the character, but feel pressured by the clock to move quickly forcing them into mistakes which can create comic releif for the game.",
+            task: "We decided to represent the timer by having the fishbowl leak over time. There would be check points where the players could refill the fishbowl, but if the fishbowl ran out of water they would have to go back to the last check point. I was tasked with designing and implimenting the UI and gameplay for both the fishbowl and check points.",
+            firstDraft: "/media/tipsy-turtles/fishbowl-firstdraft.gif",
+            action: "For the UI I decided to make it diagetic. Since the fishbowl was going to be an object that was constantly in the players veiw port I felt that making the UI diagetic would prevent us from duplicating work and would allow us to invest more time into making the fishbowl as good as it could be which was important since it was a core to our gameplay and narrative. However diagetic UI was of course challenging to design and impliment. After creating the skeleton of the game we realized that to give a better veiw of the fish bowl we would need to place the camera directly behind the players instead of slightly overhead like we had planned. I discussed this with the team and we decided to go forward with moving the camera, much to the dismay of our enviorment artist. (sorry Jaylon). For the checkpoints that would refill the fishbowl I used outdoor faucets that you might find in a backyard or a park. An issue I quickly ran into though was that the faucets refill volume for the fishbowl was too small and couldn't be made wider without making the faucet look absurd in it's proportions, so to justify the reason why the faucet was on despite no humans being around and to allow the refill volume's size to be dictaded by gameplay and not art I designed the water to look like a leak springing from the pipe because of entropy.",
+            finalDraft: "/media/tipsy-turtles/fishbowl-final.gif",
+            result: "During the begining of the project players rarely noticed the fishbowl, and while it required a lot of work like changing the position of the camera moving the fishbowl onto the skateboard and off the turtles' shell, and giving the fish dramatic animations when the water got low, we eventually got to a point where players consistently noticed it in our blind playtests. While there are obviously many things that could be improved on about the fishbowl's UI I'm very happy with how it turned out. I feel the decision to do diagetic UI really gave us the oppurtuinty to inject a lot of personality into the fish's character and have players connect with the game more as a result.",
+        }
+        populateElement({elementId: "project-asset", filePath: "/templates-html/project-asset.html", data: assetContents})
+        </script>
+
+        <script> 
+        const gridItems = [
+            {
+                link: "https://www.linkedin.com/in/samuel-c-english/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Sam English",
+                role: "Programmer"
+            },
+            {
+                link: "https://www.linkedin.com/in/erin-beardy/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Erin Beardy",
+                role: "Level Designer"
+            },
+            {
+                link: "https://www.linkedin.com/in/im-mim-daigle-hi/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Emelie D'aigle",
+                role: "Character Artist"
+            },
+            {
+                link: "https://www.linkedin.com/in/jaylonhan/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Jaylon Han",
+                role: "Envioronment Artist"
+            },
+            {
+                link: "www.linkedin.com",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Jared",
+                role: "MX/SFX Artist"
+            },
+            {
+                link: "https://www.linkedin.com/in/sysaldsound/",
+                image: "/media/profile-picture-placeholder.png",
+                name: "Samantha Sun",
+                role: "SFX Artist"
+            }
+        ];
+        populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems }) 
+        </script>
+    </body>
+</html> 

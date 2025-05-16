@@ -1,0 +1,64 @@
+<!-- Copyright (C) Rogan Johnston 2025 all rights reserved -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/grid-utils.css">
+        
+        <style>
+            /* experiment with styles here*/
+        </style>
+
+    </head>
+    <body>
+        <!--Header-->
+        <div id="header"></div>
+
+        <div class="content">
+            <h1>Projects</h1>
+            <div id="project-grid" class="grid-container"></div>
+            <hr>
+            <div>
+                <h1>My Current Project</h1>
+                <div id="current-project"></div>
+            </div>
+        </div>
+        
+
+        <!--Java Script-->
+        <script src="/scripts/html-generator.js"></script>
+        
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+
+        <script>
+            const gridItems = [
+                {
+                    title: "Villainous Delivery",
+                    image: "/media/villanous-delivery/villianous-delivery-card.jpg",
+                    link: "/project-pages/project-villainous-delivery.html"
+                },
+                {
+                    title: "Tipsy Turtles",
+                    image: "/media/tipsy-turtles/tipsy-turtles-logo.jpg",
+                    link: "/project-pages/project-tipsy-turtles.html"
+                },
+                {
+                    title: "Battle Starz",
+                    image: "/media/battle-starz/battlestarz-logo.jpg",
+                    link: "/project-pages/project-battle-starz.html"
+                }
+            ];
+            populateGrid({ elementId: "project-grid", filePath: "/templates-html/project-card.html", gridItems: gridItems })
+        </script>
+
+        <script>
+            populateElement({elementId: "current-project", filePath: "/templates-html/project-card.html", data: {
+                title: "King of Snowball Mountain",
+                image: "/media/current-project-card.gif",
+                link: "project-page.html"
+            }})
+        </script>
+
+    </body>
+ </html>
