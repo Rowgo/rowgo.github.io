@@ -28,9 +28,9 @@
 
         <!--Java Script-->
         <script src="/scripts/html-generator.js"></script>
+        <script src="/scripts/styler.js"></script>
         
-        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
-
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html", callback: highlightNav}) </script>
         <script>
             const gridItems = [
                 {
@@ -51,7 +51,6 @@
             ];
             populateGrid({ elementId: "project-grid", filePath: "/templates-html/project-card.html", gridItems: gridItems })
         </script>
-
         <script>
             populateElement({elementId: "current-project", filePath: "/templates-html/project-card.html", data: {
                 title: "King of Snowball Mountain",

@@ -68,6 +68,7 @@
         <!--Java Script-->
         <script src="/scripts/html-generator.js"></script>
         
-        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+        <script src="/scripts/styler.js"></script>
+        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html", callback: highlightNav}) </script>
     </body>
 </html>
