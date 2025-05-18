@@ -11,7 +11,7 @@ function populateString({htmlString, keys}){
 }
 
 // This can be used to find an element and populate it with a template for things like headers, footers, and other html components.
-function populateElement({elementId, filePath, data = null}){
+function populateElement({elementId, filePath, data = null, callback = null}){
     fetch(filePath)
     .then(response => response.text())
     .then(templateText => {
@@ -24,11 +24,14 @@ function populateElement({elementId, filePath, data = null}){
             templateText = populateString({htmlString: templateText, keys: data});
         }
         container.innerHTML = templateText;
+        if(typeof callback === 'function'){
+            callback();
+        }
     })
 }
 
 // This can be used to find an element and populate it a list of templates for things like tables, lists, and other html components.
-function populateGrid({elementId, filePath, gridItems}){
+function populateGrid({elementId, filePath, gridItems, callback = null}){
     container = document.getElementById(elementId)
     
     if (!container) {
@@ -45,4 +48,7 @@ function populateGrid({elementId, filePath, gridItems}){
         });
     })
     .catch(error => console.error(`Error fetching "${filePath}":`, error));
+    if(typeof callback === 'function'){
+        callback();
+    }
 }
