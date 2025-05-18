@@ -51,7 +51,9 @@ a{
 a:hover{
     color: var(--colour-accent);
 }
-
+.active{
+    color: var(--colour-accent);
+}
 /* Image Styles */
 img {
     max-width: 100%;
@@ -88,15 +90,16 @@ a:hover img{
     padding-left: 0px;
     margin-bottom: 0px;
 }
-    .horizontal-nav li{
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+    .nav-item:not(:last-child){
+        border-right: var(--colour-content) solid var(--line-thickness);
     }
-        .horizontal-nav li:not(:last-child){
-            border-right: var(--colour-content) solid var(--line-thickness);
-        }
 /* 
 Todo: consolodate all of the css I have into one file and make them. 
         if I want to break the file up for organizational purposes and to make it easier to look through, 
