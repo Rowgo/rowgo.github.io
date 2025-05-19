@@ -103,10 +103,5 @@ a:hover img{
     .nav-item:not(:last-child){
         border-right: var(--colour-content) solid var(--line-thickness);
     }
-/* 
-Todo: consolodate all of the css I have into one file and make them. 
-        if I want to break the file up for organizational purposes and to make it easier to look through, 
-        then I need to make those files general enough that they would need to be included in any page.
-*/
  
         
