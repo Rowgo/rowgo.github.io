@@ -8,13 +8,13 @@
    justify-items: center;
 }
 /* Grid layout for Tablets*/
-@media (min-width: 600px) and (max-width: 900px){
+@media screen and (min-width: 600px) and (max-width: 900px){
    .grid-container{
        grid-template-columns: repeat(2, minmax(200px, 1fr));
    }
 }
 /* Grid layout for Phones * (Might need to add condition for landscape mode.)*/
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
    .grid-container{
        grid-template-columns: repeat(1, minmax(200px, 1fr));
    }
