@@ -12,17 +12,13 @@
         <!--Header-->
         <div id="header"></div>
             
-        <h1> Contact Me </h1>
+        <h1> My Stream </h1>
         <div class="twitch-embed">
+            <div id="twitch-player" class="twitch-stream"></div>
             <iframe
-                class="twitch-stream"
-                src="https://player.twitch.tv/?channel=rowgabear&parent=127.0.0.1"
-                allowfullscreen
-                frameborder="0">
-            </iframe>
-            <iframe
+                id="twitch-chat"
                 class="twitch-chat"
-                src="https://www.twitch.tv/embed/rowgabear/chat?parent=127.0.0.1"
+                src="https://www.twitch.tv/embed/rowgabear/chat?parent=roganjohnston.com"
                 frameborder="0">
             </iframe>
         </div>
@@ -54,11 +50,34 @@
                 </p>
             </div>
         </div>
-
+        <div class="twitch-embed">
+            
+        </div>
         <!--Java Script-->
         <script src="/scripts/html-generator.js"></script>
-        
+        <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
         <script src="/scripts/styler.js"></script>
         <script> populateElement({elementId: "header", filePath: "/templates-html/header.html", callback: highlightNav}) </script>
+        <script type="text/javascript">
+            var options = {
+                width: "100%",
+                height: "100%",
+                channel: "rowgabear",
+                parent: ["roganjohnston.com"],
+            };
+            var player = new Twitch.Player("twitch-player", options);
+            player.setVolume(0.5);
+
+            player.addEventListener(Twitch.Player.ONLINE, function() {
+                console.log("Playing");
+                document.getElementById("twitch-player").style.borderColor = "var(--colour-accent)";
+                document.getElementById("twitch-chat").style.borderColor = "var(--colour-accent)";
+            });
+            player.addEventListener(Twitch.Player.OFFLINE, function() {
+                console.log("Offline");
+                document.getElementById("twitch-player").style.borderColor = "var(--colour-content)";
+                document.getElementById("twitch-chat").style.borderColor = "var(--colour-content)";
+            });
+        </script>
     </body>
 </html>
