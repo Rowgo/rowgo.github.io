@@ -70,6 +70,15 @@ a img{
 a:hover img{
     border:var(--colour-accent) solid var(--line-thickness);
 }
+a svg{
+    width: 100px;
+    height: 100px;
+    border: var(--colour-content) solid var(--line-thickness);
+    border-radius: 50%;
+}
+a:hover svg{
+    border: var(--colour-accent) solid var(--line-thickness);
+}
 
 /* Base Classes */
 
