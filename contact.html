@@ -3,7 +3,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/styles/main.css">
-
+        <link rel="stylesheet" href="/styles/twitch-player.css">
         <style>
 
         </style>
@@ -11,28 +11,27 @@
     <body>
         <!--Header-->
         <div id="header"></div>
+            
+        <h1> Contact Me </h1>
+        <div class="twitch-embed">
+            <iframe
+                class="twitch-stream"
+                src="https://player.twitch.tv/?channel=rowgabear&parent=127.0.0.1"
+                allowfullscreen
+                frameborder="0">
+            </iframe>
+            <iframe
+                class="twitch-chat"
+                src="https://www.twitch.tv/embed/rowgabear/chat?parent=127.0.0.1"
+                frameborder="0">
+            </iframe>
+        </div>
 
-            <h1> Contact Me </h1>
-            <div class="twitch-embed">
-                <p>
-                    I stream on twitch every ___day at __M PST. If I'm streaming right now feel free to ask me anything in the twitch chat.
-                </p>
-                <iframe
-                    src="https://player.twitch.tv/?channel=rowgabear&parent=roganjohnston.com"
-                    height="480"
-                    width="720"
-                    allowfullscreen
-                    frameborder="0">
-                </iframe>
-                <iframe
-                    src="https://www.twitch.tv/embed/rowgabear/chat?parent=roganjohnston.com"
-                    height="480"
-                    width="350"
-                    frameborder="0">
-                </iframe>
-            </div>
-            <hr>
         <div class="container-content">
+            <p>
+                I stream on twitch every ___day at __M PST. If I'm streaming right now feel free to ask me anything in the twitch chat.
+            </p>
+            <hr>
             <div>
                 <h1> My Socials </h1>
                 <div class="flex-space-around">
@@ -44,7 +43,7 @@
                     <a href="https://www.twitch.tv/rowgabear" target="_blank" rel="noopener noreferrer">
                         <svg class="icon"><use href="/media/sprites/socials-icons.svg#icon-twitch"/></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/roganjohnston/" target="_blank" rel="noopener noreferrer" >
+                    <a href="https://www.linkedin.com/in/roganjohnston/" target="_blank" rel="noopener noreferrer">
                         <svg class="icon">
                             <use href="/media/sprites/socials-icons.svg#icon-linkedin"/>
                         </svg>
