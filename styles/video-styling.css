@@ -1,0 +1,9 @@
+.video{
+    width: 100%;
+    max-width: 1080px;
+    min-width: 360px;
+    height: auto;
+    aspect-ratio: 16/9;
+    box-sizing: border-box;
+    border: var(--colour-content) solid var(--line-thickness);
+}
