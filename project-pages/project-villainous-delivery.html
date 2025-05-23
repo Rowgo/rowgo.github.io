@@ -13,7 +13,16 @@
         
         <!--Page Content-->
         <div class="container-content">
-            <div id="overveiw"></div>
+            <div>
+                <h1>Villainous Delivery</h1>
+                <p>
+                    <!-- Project Description -->
+                    Villainous Delivery was made by myself and a team of 5 in a weekend for the lame jam hosted on itch.io. 
+                    I was a game designer, and programmer for the team.
+                </p>
+                <!-- Porject Overveiw + Reflection Video -->
+                 <iframe src="https://www.youtube.com/embed/VIDEO_ID" class="video"></iframe>
+            </div>
             <hr>
             <h1>Collaborators</h1>
             <div class="grid-container" id="collaberators"></div>
@@ -25,42 +34,33 @@
         <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
 
         <script> 
-        const overveiwContents = {
-            projectName: "Villainous Delivery",
-            discripton: "Villainous Delivery was made by myself and a team of 5 in a weekend for the lame jam hosted on itch.io. I was a game designer, and programmer for the team.",
-            videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
-        }
-        populateElement({elementId: "overveiw", filePath: "/templates-html/project-overveiw.html", data: overveiwContents})
-        </script>
-
-        <script> 
-        const gridItems = [
-            {
-                link: "https://www.linkedin.com/in/rahul-majgi/",
-                image: "/media/profile-picture-placeholder.png",
-                name: "Rahul Majgi",
-                role: "VFX Artist"
-            },
-            {
-                link: "https://www.linkedin.com/in/max-miller-envart/",
-                image: "/media/profile-picture-placeholder.png",
-                name: "Max Miller",
-                role: "3D Artist"
-            },
-            {
-                link: "https://www.linkedin.com",
-                image: "/media/profile-picture-placeholder.png",
-                name: "Jared Fontaine",
-                role: "SFX Artist"
-            },
-            {
-                link: "https://www.linkedin.com/in/parkerlukacin/",
-                image: "/media/profile-picture-placeholder.png",
-                name: "Parker Lukacin",
-                role: "Technical Sound Designer"
-            }
-        ];
-        populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems }) 
+            const gridItems = [
+                {
+                    link: "https://www.linkedin.com/in/rahul-majgi/",
+                    image: "/media/profile-picture-placeholder.png",
+                    name: "Rahul Majgi",
+                    role: "VFX Artist"
+                },
+                {
+                    link: "https://www.linkedin.com/in/max-miller-envart/",
+                    image: "/media/profile-picture-placeholder.png",
+                    name: "Max Miller",
+                    role: "3D Artist"
+                },
+                {
+                    link: "https://www.linkedin.com",
+                    image: "/media/profile-picture-placeholder.png",
+                    name: "Jared Fontaine",
+                    role: "SFX Artist"
+                },
+                {
+                    link: "https://www.linkedin.com/in/parkerlukacin/",
+                    image: "/media/profile-picture-placeholder.png",
+                    name: "Parker Lukacin",
+                    role: "Technical Sound Designer"
+                }
+            ];
+            populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems }) 
         </script>
     </body>
 </html> 
