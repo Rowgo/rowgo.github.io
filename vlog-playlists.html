@@ -1,0 +1,50 @@
+<!-- Copyright (C) Rogan Johnston all rights reserved -->
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        .class-name {
+            border:var(--colour-background) solid var(--line-thickness); 
+            width: 340px; 
+            height: 340px;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: currentColor;
+            transition: 0.0s;
+            position: relative;
+        }
+        .class-name:hover {
+            background-color: var(--colour-accent);
+        }
+        .video-number {
+            background-color: currentColor; 
+            border: var(--colour-background) solid var(--line-thickness);
+            position: absolute; 
+            bottom: 10px; 
+            right: 10px; 
+            display: flex; 
+            align-items: center;
+        }
+        a img {
+            border: none;
+        }
+        a img:hover {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="" style="display: inline-flex;">
+        <div class="class-name">
+            <div class="class-name">
+                <div class="class-name">
+                    <img src="/media/tipsy-turtles/tipsy-turtles-logo.jpg">
+                    <div class="video-number">
+                        <p style="margin: 10px; color: var(--colour-background)">3 videos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</body>
