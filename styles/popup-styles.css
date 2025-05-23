@@ -8,7 +8,8 @@
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* prevents the popup from going off the top of the screen */
+    overflow: auto; /* allows scrolling */
 }
 .popup-close-btn{
     position: absolute;
@@ -23,8 +24,6 @@
 .popup-close-btn:hover{
     color: var(--colour-accent);
 }
-/*  this style doesn't prevent the image from flowing off the page height wise,
-    but it prevents the close button from being in strange positions. */
 /*  todo: remove popups for mobile or make them take up the whole screen and close 
     when the user presses anywhere on the screen */
 .popup-content{
