@@ -46,9 +46,11 @@ function populateGrid({elementId, filePath, gridItems, callback = null}){
             const populatedString = populateString({htmlString: templateText, keys: item});
             container.innerHTML += populatedString;
         });
+        if(typeof callback === 'function'){
+            callback();
+        }
     })
     .catch(error => console.error(`Error fetching "${filePath}":`, error));
-    if(typeof callback === 'function'){
-        callback();
+}
     }
 }
