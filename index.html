@@ -48,7 +48,7 @@
                     link: "/project-pages/project-battle-starz.html"
                 }
             ];
-            populateGrid({ elementId: "project-grid", filePath: "/templates-html/project-card.html", gridItems: gridItems })
+            populateGrid({ elementId: "project-grid", filePath: "/templates-html/project-card.html", gridItems: gridItems, callback: centerLastGridRow });
         </script>
         <script>
             populateElement({elementId: "current-project", filePath: "/templates-html/project-card.html", data: {

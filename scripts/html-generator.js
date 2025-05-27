@@ -52,5 +52,21 @@ function populateGrid({elementId, filePath, gridItems, callback = null}){
     })
     .catch(error => console.error(`Error fetching "${filePath}":`, error));
 }
+
+function centerLastGridRow(){
+    const gridContainer = document.querySelector('.grid-container');
+    const gridItems = gridContainer.querySelectorAll('.grid-item');
+    const totalItems = gridItems.length;
+    const gridComputedStyle = window.getComputedStyle(gridContainer);
+    const columnCount = gridComputedStyle.gridTemplateColumns.split(' ').length;
+    const remainingItems = totalItems % columnCount;
+ 
+    if (remainingItems === 0) {
+        return;
+    }
+    for (let i = 0; i < remainingItems; i++) {
+        item = gridItems[gridItems.length - i - 1];
+        item.style.gridColumn = `${-(Math.floor(columnCount / remainingItems * i) ) + i / -(Math.ceil(columnCount / remainingItems * (i + 1)) + i)}`;
+        item.style.gridRow = `${Math.ceil(totalItems / columnCount)}`;
     }
 }

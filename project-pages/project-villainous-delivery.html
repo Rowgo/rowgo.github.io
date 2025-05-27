@@ -5,6 +5,17 @@
         <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/grid-styles.css">
         <link rel="stylesheet" href="/styles/video-styling.css">
+
+        <style>
+            .grid-container > *:nth-child(4) {
+                grid-column: 1 / 3;
+                grid-row: 2;
+            }
+            .grid-container > *:nth-child(5) {
+                grid-column: -1 / -3;
+                grid-row: 2;
+            }
+        </style>
     </head>
     <body>
 
@@ -58,9 +69,15 @@
                     image: "/media/profile-picture-placeholder.png",
                     name: "Parker Lukacin",
                     role: "Technical Sound Designer"
+                },
+                {
+                    link: "https://www.linkedin.com/in/parkerlukacin/",
+                    image: "/media/profile-picture-placeholder.png",
+                    name: "Parker Lukacin",
+                    role: "Technical Sound Designer"
                 }
             ];
-            populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems }) 
+            populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems, callback: centerLastGridRow }) 
         </script>
     </body>
 </html> 
