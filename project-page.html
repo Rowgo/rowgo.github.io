@@ -9,7 +9,7 @@
     <body>
 
         <!--Header-->
-        <div id="header"></div>
+        <header is="site-header"></header>
         
         <!-- Page Content -->
         <div class="container-content">
@@ -27,7 +27,7 @@
         <!--Java Script-->
         <script src="/scripts/html-generator.js"></script>
         
-        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+        <script tpye="module" src="/scripts/web-components/header.js"></script>
 
         <script> 
         const overveiwContents = {

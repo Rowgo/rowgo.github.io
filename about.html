@@ -6,7 +6,7 @@
     </head>
     <body>
         <!--Header-->
-        <div id="header"></div>
+        <header is="site-header"></header>
         <div class="container-content">
             <use href="#header"/>
             <h1>About</h1>
@@ -54,6 +54,6 @@
         <!--Java Script-->
         <script src="/scripts/html-generator.js"></script>
         <script src="/scripts/styler.js"></script>
-        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html", callback: highlightNav}) </script>
+        <script tpye="module" src="/scripts/web-components/header.js"></script>
     </body>
 </html>

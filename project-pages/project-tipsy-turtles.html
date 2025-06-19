@@ -10,7 +10,7 @@
     <body>
         
         <!--Header-->
-        <div id="header"></div>
+        <header is="site-header"></header>
         
         <!-- Page Content -->
         <div class="container-content">
@@ -80,7 +80,7 @@
         <script src="/scripts/html-generator.js"></script>
         <script src="/scripts/popup-binding.js"></script>
         
-        <script> populateElement({elementId: "header", filePath: "/templates-html/header.html"}) </script>
+        <script tpye="module" src="/scripts/web-components/header.js"></script>
         
         <script> populateElement({elementId: "popup-container", filePath: "/templates-html/image-popup.html", callback: bindPopups}) </script>
 
