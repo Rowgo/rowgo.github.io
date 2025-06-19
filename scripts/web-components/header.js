@@ -23,16 +23,16 @@ class SiteHeader extends HTMLElement {
 
     highlightCurrentPage() {
         const currentUrl = window.location.pathname;
-        const navAncors = this.querySelectorAll('.nav-item a');
+        const navAnchors = this.querySelectorAll('.nav-item a');
         
         console.log(currentUrl)
         
-        navAncors.forEach(ancor => {
-            const ancorUrl = ancor.pathname;
+        navAnchors.forEach(anchor => {
+            const ancorUrl = anchor.pathname;
             console.log(ancorUrl)
         
             if (currentUrl === ancorUrl) {
-                ancor.classList.add('active');
+                anchor.classList.add('active');
             }
         });
     }
