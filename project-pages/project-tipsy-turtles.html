@@ -71,7 +71,38 @@
             </div>
             <hr>
             <h1>Collaborators</h1>
-            <div class="grid-container" id="collaberators"></div>      
+            <div class="grid-container" id="collaberators">
+                <project-credit href="https://www.linkedin.com/in/samuel-c-english/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Sam English"
+                    role="Programmer">
+                </project-credit>
+                <project-credit href="https://www.linkedin.com/in/erin-beardy/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Erin Beardy"
+                    role="Level Designer">
+                </project-credit>
+                <project-credit href="https://www.linkedin.com/in/im-mim-daigle-hi/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Emelie D'aigle"
+                    role="Character Artist">
+                </project-credit>
+                <project-credit href="https://www.linkedin.com/in/jaylonhan/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Jaylon Han"
+                    role="Envioronment Artist">
+                </project-credit>
+                <project-credit href="www.linkedin.com"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Jared"
+                    role="MX/SFX Artist">
+                </project-credit>
+                <project-credit href="https://www.linkedin.com/in/sysaldsound/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Samantha Sun"
+                    role="SFX Artist">
+                </project-credit>
+            </div>      
         </div>
         
         <div id="popup-container"></div>
@@ -81,49 +112,7 @@
         <script src="/scripts/popup-binding.js"></script>
         
         <script tpye="module" src="/scripts/web-components/header.js"></script>
-        
-        <script> populateElement({elementId: "popup-container", filePath: "/templates-html/image-popup.html", callback: bindPopups}) </script>
-
-        <script> 
-            const gridItems = [
-                {
-                    link: "https://www.linkedin.com/in/samuel-c-english/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Sam English",
-                    role: "Programmer"
-                },
-                {
-                    link: "https://www.linkedin.com/in/erin-beardy/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Erin Beardy",
-                    role: "Level Designer"
-                },
-                {
-                    link: "https://www.linkedin.com/in/im-mim-daigle-hi/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Emelie D'aigle",
-                    role: "Character Artist"
-                },
-                {
-                    link: "https://www.linkedin.com/in/jaylonhan/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Jaylon Han",
-                    role: "Envioronment Artist"
-                },
-                {
-                    link: "www.linkedin.com",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Jared",
-                    role: "MX/SFX Artist"
-                },
-                {
-                    link: "https://www.linkedin.com/in/sysaldsound/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Samantha Sun",
-                    role: "SFX Artist"
-                }
-            ];
-            populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems, callback: centerLastGridRow }) 
-        </script>
+        <script type="module" src="/scripts/web-components/project-credit.js"></script>
+        <script type="module" src="/scripts/web-components/img-popup.js"></script>
     </body>
 </html> 

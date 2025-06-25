@@ -36,48 +36,44 @@
             </div>
             <hr>
             <h1>Collaborators</h1>
-            <div class="grid-container" id="collaberators"></div>
+            <div class="grid-container">
+                <project-credit    
+                    href="https://www.linkedin.com/in/rahul-majgi/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Rahul Majgi"
+                    role="VFX Artist"
+                ></project-credit>
+                    <project-credit
+                    href="https://www.linkedin.com/in/max-miller-envart/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Max Miller"
+                    role="3D Artist"
+                ></project-credit>
+                    <project-credit
+                    href="https://www.linkedin.com"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Jared Fontaine"
+                    role="SFX Artist"
+                ></project-credit>
+                <project-credit
+                    href="https://www.linkedin.com/in/parkerlukacin/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Parker Lukacin"
+                    role="Technical Sound Designer"
+                ></project-credit>
+                <project-credit
+                    href="https://www.linkedin.com/in/parkerlukacin/"
+                    img-src="/media/profile-picture-placeholder.png"
+                    name="Parker Lukacin"
+                    role="Technical Sound Designer"
+                ></project-credit>
+            </div>
         </div>
 
         <!--Java Script-->
         <script src="/scripts/html-generator.js"></script>
         
         <script tpye="module" src="/scripts/web-components/header.js"></script>
-
-        <script> 
-            const gridItems = [
-                {
-                    link: "https://www.linkedin.com/in/rahul-majgi/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Rahul Majgi",
-                    role: "VFX Artist"
-                },
-                {
-                    link: "https://www.linkedin.com/in/max-miller-envart/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Max Miller",
-                    role: "3D Artist"
-                },
-                {
-                    link: "https://www.linkedin.com",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Jared Fontaine",
-                    role: "SFX Artist"
-                },
-                {
-                    link: "https://www.linkedin.com/in/parkerlukacin/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Parker Lukacin",
-                    role: "Technical Sound Designer"
-                },
-                {
-                    link: "https://www.linkedin.com/in/parkerlukacin/",
-                    image: "/media/profile-picture-placeholder.png",
-                    name: "Parker Lukacin",
-                    role: "Technical Sound Designer"
-                }
-            ];
-            populateGrid({ elementId: "collaberators", filePath: "/templates-html/collaberator-badge.html", gridItems: gridItems, callback: centerLastGridRow }) 
-        </script>
+        <script type="module" src="/scripts/web-components/project-credit.js"></script>
     </body>
 </html> 
