@@ -82,7 +82,7 @@ a:hover svg{
 
 /* Base Classes */
 
-.container-content{
+.content-container{
     max-width: 960px;
     margin: auto;
     padding-left: 10px;
