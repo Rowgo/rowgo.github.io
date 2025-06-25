@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/grid-styles.css">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             /* experiment with styles here*/
         </style>
@@ -16,45 +16,28 @@
 
         <div class="container-portfolio">
             <h1>Projects</h1>
-            <div id="project-grid" class="grid-container"></div>
+            <div class="grid-container">
+                <project-card img-src="/media/villanous-delivery/villianous-delivery-card.jpg" href="/project-pages/project-villainous-delivery.html">
+                    Villainous Delivery
+                </project-card>
+                <project-card img-src="/media/tipsy-turtles/tipsy-turtles-logo.jpg" href="/project-pages/project-tipsy-turtles.html">
+                    Tipsy Turtles
+                </project-card>
+                <project-card img-src="/media/battle-starz/battlestarz-logo.jpg" href="/project-pages/project-battle-starz.html">
+                    Battle Starz
+                </project-card>
+            </div>
             <hr>
             <div>
                 <h1>My Current Project</h1>
-                <div id="current-project"></div>
+                <project-card img-src="/media/current-project-card.gif" href="project-page.html">
+                    King of Snowball Mountain
+                </project-card>
             </div>
         </div>
 
         <!--Java Script-->
-        <script src="/scripts/html-generator.js"></script>
-        
         <script tpye="module" src="/scripts/web-components/header.js"></script>
-        <script>
-            const gridItems = [
-                {
-                    title: "Villainous Delivery",
-                    image: "/media/villanous-delivery/villianous-delivery-card.jpg",
-                    link: "/project-pages/project-villainous-delivery.html"
-                },
-                {
-                    title: "Tipsy Turtles",
-                    image: "/media/tipsy-turtles/tipsy-turtles-logo.jpg",
-                    link: "/project-pages/project-tipsy-turtles.html"
-                },
-                {
-                    title: "Battle Starz",
-                    image: "/media/battle-starz/battlestarz-logo.jpg",
-                    link: "/project-pages/project-battle-starz.html"
-                }
-            ];
-            populateGrid({ elementId: "project-grid", filePath: "/templates-html/project-card.html", gridItems: gridItems, callback: centerLastGridRow });
-        </script>
-        <script>
-            populateElement({elementId: "current-project", filePath: "/templates-html/project-card.html", data: {
-                title: "King of Snowball Mountain",
-                image: "/media/current-project-card.gif",
-                link: "project-page.html"
-            }})
-        </script>
-
+        <script type="module" src="/scripts//web-components/project-card.js"></script>
     </body>
  </html>
