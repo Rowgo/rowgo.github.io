@@ -25,11 +25,8 @@ class SiteHeader extends HTMLElement {
         const currentUrl = window.location.pathname;
         const navAnchors = this.querySelectorAll('.nav-item a');
         
-        console.log(currentUrl)
-        
         navAnchors.forEach(anchor => {
             const ancorUrl = anchor.pathname;
-            console.log(ancorUrl)
         
             if (currentUrl === ancorUrl) {
                 anchor.classList.add('active');
