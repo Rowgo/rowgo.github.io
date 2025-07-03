@@ -65,7 +65,7 @@ img {
 }
 a img{
     border:var(--colour-content) solid var(--line-thickness);
-    box-sizing: border-box; /* Ensures padding is included in the item's size */
+    box-sizing: border-box; /* Ensures border and padding is included in the item's size */
 }
 a:hover img{
     border:var(--colour-accent) solid var(--line-thickness);
@@ -81,6 +81,14 @@ a:hover svg{
 }
 
 /* Base Classes */
+
+.card{
+   margin: 10px;
+   display: inline-flex;
+   flex-direction: column;
+   align-items: center;
+}
+
 
 .content-container{
     max-width: 960px;

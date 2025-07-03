@@ -19,14 +19,3 @@
        grid-template-columns: repeat(1, minmax(200px, 1fr));
    }
 }
-.grid-item{
-   margin: 10px;
-}
-   .grid-item a{
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-   }
-   .grid-item img{
-      margin-bottom: 0px;
-   }
