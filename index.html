@@ -5,10 +5,6 @@
         <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/grid-styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            /* experiment with styles here*/
-        </style>
-
     </head>
     <body>
         <!--Header-->
@@ -17,27 +13,30 @@
         <div class="container-portfolio">
             <h1>Projects</h1>
             <div class="grid-container">
-                <project-card img-src="/media/villanous-delivery/villianous-delivery-card.jpg" href="/project-pages/project-villainous-delivery.html">
+                <a class="card" href="/project-pages/project-villainous-delivery.html">
+                    <img src="/media/villanous-delivery/villianous-delivery-card.jpg" alt="">
                     Villainous Delivery
-                </project-card>
-                <project-card img-src="/media/tipsy-turtles/tipsy-turtles-logo.jpg" href="/project-pages/project-tipsy-turtles.html">
+                </a>
+                <a class="card" href="/project-pages/project-tipsy-turtles.html">
+                    <img src="/media/tipsy-turtles/tipsy-turtles-logo.jpg" alt="">
                     Tipsy Turtles
-                </project-card>
-                <project-card img-src="/media/battle-starz/battlestarz-logo.jpg" href="/project-pages/project-battle-starz.html">
+                </a>
+                <a class="card" href="/project-pages/project-battle-starz.html">
+                    <img src="/media/battle-starz/battlestarz-logo.jpg" alt="">
                     Battle Starz
-                </project-card>
+                </a>
             </div>
             <hr>
-            <div>
-                <h1>My Current Project</h1>
-                <project-card img-src="/media/current-project-card.gif" href="project-page.html">
+            <h1>My Current Project</h1>
+            <div class="grid-container">
+                <a class="card" href="project-page.html">
+                    <img src="/media/current-project-card.gif" alt="">
                     King of Snowball Mountain
-                </project-card>
+                </a>
             </div>
         </div>
 
         <!--Java Script-->
         <script tpye="module" src="/scripts/web-components/header.js"></script>
-        <script type="module" src="/scripts//web-components/project-card.js"></script>
     </body>
  </html>

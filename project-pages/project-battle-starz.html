@@ -61,30 +61,38 @@
             <hr>
             <h1>Collaborators</h1>
             <div class="grid-container" id="collaberators">
-                <project-credit 
-                    img-src="/media/profile-picture-placeholder.png" 
-                    href="https://www.linkedin.com/in/samuel-c-english/"
-                    name="Sam English"
-                    role="Programmer">
-                </project-credit>
-                <project-credit 
-                    img-src="/media/profile-picture-placeholder.png" 
-                    href="https://www.linkedin.com/in/nic-seymour/"
-                    name="Nic Seymour"
-                    role="Artist">
-                </project-credit>
-                <project-credit 
-                    img-src="/media/profile-picture-placeholder.png" 
-                    href="www.linkedin.com"
-                    name="Steven"
-                    role="UI Programmer">
-                </project-credit>
-                <project-credit 
-                    img-src="/media/profile-picture-placeholder.png" 
-                    href="https://www.linkedin.com/in/nicholas-perrott-a89471198/"
-                    name="Nick Perott"
-                    role="QA">
-                </project-credit>
+                <a class="card" href="https://www.linkedin.com/in/samuel-c-english/">
+                    <svg style="width: 200px; height: 200px;">
+                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
+                    </svg>
+                    Sam English
+                    <br>
+                    Programmer
+                </a>
+                <a class="card" href="https://www.linkedin.com/in/nic-seymour/">
+                    <svg style="width: 200px; height: 200px;">
+                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
+                    </svg>
+                    Nic Seymour
+                    <br>
+                    Artist
+                </a>
+                <a class="card" href="www.linkedin.com">
+                    <svg style="width: 200px; height: 200px;">
+                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
+                    </svg>
+                    Steven
+                    <br>
+                    UI Programmer
+                </a>
+                <a class="card" href="https://www.linkedin.com/in/nicholas-perrott-a89471198/">
+                    <svg style="width: 200px; height: 200px;">
+                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
+                    </svg>
+                    Nick Perott
+                    <br>
+                    QA
+                </a>
             </div>
         </div>
 
@@ -92,7 +100,6 @@
 
         <!--Java Script-->        
         <script type="module" src="/scripts/web-components/header.js"></script>
-        <script type="module" src="/scripts/web-components/project-credit.js"></script>
         <script type="module" src="/scripts/web-components/img-popup.js"></script>
         
         <!--script> populateElement({elementId: "popup-container", filePath: "/templates-html/image-popup.html", callback: bindPopups}) </script-->
