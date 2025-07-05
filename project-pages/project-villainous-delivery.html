@@ -3,19 +3,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/styles/main.css">
-        <link rel="stylesheet" href="/styles/grid-styles.css">
         <link rel="stylesheet" href="/styles/video-styling.css">
-
-        <style>
-            .grid-container > *:nth-child(4) {
-                grid-column: 1 / 3;
-                grid-row: 2;
-            }
-            .grid-container > *:nth-child(5) {
-                grid-column: -1 / -3;
-                grid-row: 2;
-            }
-        </style>
     </head>
     <body>
 
@@ -36,7 +24,7 @@
             </div>
             <hr>
             <h1>Collaborators</h1>
-            <div class="grid-container">
+            <centered-grid>
                 <a class="card"  href="https://www.linkedin.com/in/rahul-majgi/">    
                     <img src="/media/profile-picture-placeholder.png">
                     Rahul Majgi
@@ -67,10 +55,11 @@
                     <br>
                     Technical Sound Designer
                 </a>
-            </div>
+            </centered-grid>
         </div>
 
         <!--Java Script-->
         <script tpye="module" src="/scripts/web-components/header.js"></script>
+        <script type="module" src="/scripts/web-components/grid.js"></script>
     </body>
 </html> 

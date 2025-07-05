@@ -1,0 +1,89 @@
+// Copyright (C) Rogan Johnston 2025 all rights reserved
+const componentStyles = new CSSStyleSheet();
+componentStyles.replaceSync(
+    ` 
+        centered-grid{
+           display: grid;
+           grid-template-columns: repeat(3, minmax(200px, 1fr));
+           justify-content: center;
+           justify-items: center;
+        }
+        .small-grid{
+            grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+        }
+    `
+);
+
+document.adoptedStyleSheets = [
+    ...document.adoptedStyleSheets,
+    componentStyles
+];
+
+class Grid extends HTMLElement {
+    // made this web component just so I could get the last row on my grids centered
+    constructor(){
+    //
+        super();
+        //create event handler
+        this._eventHandler = this.onMediaEvent.bind(this);
+    }
+    connectedCallback(){
+        this.mediaMatch = window.matchMedia("(max-width: 800px)");
+
+        // get columns as attributes
+        // create media query events
+        // bind the event to center last grid row function
+        this.mediaMatch.addEventListener("change", this._eventHandler);
+        this._eventHandler(this.mediaMatch);
+    }
+
+    onMediaEvent(event){
+        // this code sucks and should be changed in favor of using dictionaies and attributes to set up media queries, matches, and column count, but this is taking forever and it's not that important and I need to move on, so lets move on.
+        if(event.matches) {
+            this.classList.add('small-grid');
+        }
+        else {
+            this.classList.remove('small-grid');
+        }
+
+        this.centerLastRow();
+    }
+    //center last grid row
+    centerLastRow(){
+        const gridItems = this.children;
+        const totalItems = gridItems.length;
+        const computedStlye = window.getComputedStyle(this);
+        const columnCount = computedStlye.gridTemplateColumns.split(' ').length;
+        const remainingItems = totalItems % columnCount;
+ 
+        for (let i = 0; i < gridItems.length; i++){
+            let item = gridItems[i];
+            item.style.gridArea = null;
+            item.style.width = null;
+        }
+        if (remainingItems === 0) {
+            return;
+        }
+        // style the remaining items
+        for (let i = 0; i < remainingItems; i++) {
+            const span = columnCount / remainingItems; // divide the rows columns by the remaining items to find how many columns each items needs to span
+            const columnStart = 1 + Math.floor(span * i); // mutiply the span variable by i to find where in the row the new column should start. floor it to round the value to the closest left most line. add 1 because css starts the span at 1
+            const columnEnd = 1 + Math.ceil(span * (i + 1)); // multiply span by i + 1 to find start + span. round to the rightmost line with ceiling, and add 1 because css starts the span at 1.
+
+            const row = Math.ceil(gridItems.length / columnCount)
+
+            const width = 100 / columnCount;
+
+            const item = gridItems[gridItems.length - remainingItems + i];
+            item.style.gridArea = `${row} / ${columnStart} / auto / ${columnEnd}`;
+            item.style.width = `${width}%`;
+        }
+    }
+
+    disconnectedCallback(){
+        this.phoneMedia.removeEventListener("change", this._eventHandler);
+        this.tabletMedia.removeEventListener("change", this._eventHandler);
+    }
+}
+
+customElements.define('centered-grid', Grid);

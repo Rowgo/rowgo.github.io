@@ -3,7 +3,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="/styles/main.css">
-        <link rel="stylesheet" href="/styles/grid-styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -12,7 +11,7 @@
 
         <div class="container-portfolio">
             <h1>Projects</h1>
-            <div class="grid-container">
+            <centered-grid>
                 <a class="card" href="/project-pages/project-villainous-delivery.html">
                     <img src="/media/villanous-delivery/villianous-delivery-card.jpg" alt="">
                     Villainous Delivery
@@ -25,18 +24,19 @@
                     <img src="/media/battle-starz/battlestarz-logo.jpg" alt="">
                     Battle Starz
                 </a>
-            </div>
+            </centered-grid>
             <hr>
             <h1>My Current Project</h1>
-            <div class="grid-container">
+            <centered-grid>
                 <a class="card" href="project-page.html">
                     <img src="/media/current-project-card.gif" alt="">
                     King of Snowball Mountain
                 </a>
-            </div>
+            </centered-grid>
         </div>
 
         <!--Java Script-->
         <script tpye="module" src="/scripts/web-components/header.js"></script>
+        <script type="module" src="/scripts/web-components/grid.js"></script>
     </body>
  </html>

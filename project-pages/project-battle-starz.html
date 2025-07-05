@@ -3,9 +3,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/styles/main.css">
-        <link rel="stylesheet" href="/styles/grid-styles.css">
         <link rel="stylesheet" href="/styles/video-styling.css">
-        <link rel="stylesheet" href="/styles/popup-styles.css">
     </head>
     <body>
 
@@ -60,7 +58,7 @@
             </div>
             <hr>
             <h1>Collaborators</h1>
-            <div class="grid-container" id="collaberators">
+            <centered-grid>
                 <a class="card" href="https://www.linkedin.com/in/samuel-c-english/">
                     <svg style="width: 200px; height: 200px;">
                         <use href="/media/sprites/profile-pictures.svg#placeholder"/>
@@ -93,7 +91,7 @@
                     <br>
                     QA
                 </a>
-            </div>
+            </centered-grid>
         </div>
 
         <popup-container></popup-container>
@@ -101,6 +99,7 @@
         <!--Java Script-->        
         <script type="module" src="/scripts/web-components/header.js"></script>
         <script type="module" src="/scripts/web-components/img-popup.js"></script>
+        <script type="module" src="/scripts/web-components/grid.js"></script>
         
         <!--script> populateElement({elementId: "popup-container", filePath: "/templates-html/image-popup.html", callback: bindPopups}) </script-->
     </body>
