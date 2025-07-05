@@ -1,3 +1,52 @@
+
+const componentStyles = new CSSStyleSheet();
+componentStyles.replaceSync(
+    ` 
+        .popup{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: flex-start; /* prevents the popup from going off the top of the screen */
+            overflow: auto; /* allows scrolling */
+        }
+        .popup-close-btn{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--colour-background);
+            font-size: 32px;
+            cursor: pointer;
+            width: 50px; /* keeps the box in a 1/1 aspect ratio meaning the margin looks right*/
+            height: 50px;
+        }
+        .popup-close-btn:hover{
+            color: var(--colour-accent);
+        }
+        /*  todo: remove popups for mobile or make them take up the whole screen and close 
+            when the user presses anywhere on the screen */
+        .popup-content{
+            display: flex;
+            position: relative;
+            max-width: 90%;
+        }
+        .popup-able{
+            box-sizing: border-box;
+            border: var(--colour-content) solid var(--line-thickness);
+        }
+    `
+);
+
+document.adoptedStyleSheets = [
+    ...document.adoptedStyleSheets,
+    componentStyles
+];
+
 class ImgPopup extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
