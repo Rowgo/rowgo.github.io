@@ -38,16 +38,24 @@ class Grid extends HTMLElement {
     }
 
     onMediaEvent(event){
-        // this code sucks and should be changed in favor of using dictionaies and attributes to set up media queries, matches, and column count, but this is taking forever and it's not that important and I need to move on, so lets move on.
+        //
+        this.classList.remove('small-grid');
+        this.removeCenteredStyles();
+
         if(event.matches) {
             this.classList.add('small-grid');
         }
-        else {
-            this.classList.remove('small-grid');
-        }
-
         this.centerLastRow();
     }
+    removeCenteredStyles(){
+        const gridItems = this.children;
+        for (let i = 0; i < gridItems.length; i++){
+            let item = gridItems[i];
+            item.style.gridArea = null;
+            item.style.width = null;
+        }
+    }
+
     //center last grid row
     centerLastRow(){
         const gridItems = this.children;
@@ -56,11 +64,6 @@ class Grid extends HTMLElement {
         const columnCount = computedStlye.gridTemplateColumns.split(' ').length;
         const remainingItems = totalItems % columnCount;
  
-        for (let i = 0; i < gridItems.length; i++){
-            let item = gridItems[i];
-            item.style.gridArea = null;
-            item.style.width = null;
-        }
         if (remainingItems === 0) {
             return;
         }

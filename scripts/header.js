@@ -35,11 +35,10 @@ class SiteHeader extends HTMLElement {
     }
 }
 
-customElements.define('site-header', SiteHeader, {extends: 'header'})
+customElements.define('site-header', SiteHeader, {extends: 'header'});
 
 /* 
-constructor()	When element is created	Initialize shadow DOM, set defaults
-connectedCallback()	Added to DOM	Render content, fetch data
-disconnectedCallback()	Removed from DOM	Cleanup event listeners
-attributeChangedCallback()	Observed attributes change	Update DOM when attributes change
+TODO:
+    - when the window becomes small enough change the nav menu to a drop down and center it underneath the title of the website.
+    - add a link to the landing page on to the title of the website. This will increase the likely hood people will be able to navigate back.
 */
