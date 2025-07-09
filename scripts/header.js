@@ -3,21 +3,19 @@
 class SiteHeader extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
-            <div class="flex-space-around" style="border-bottom: var(--line-thickness) solid var(--colour-content);">
-                <div>
-                    <h1 style=" color: var(--colour-content)">Rogan Johnston</h1>
-                </div>
-                <div>
-                    <nav>
-                        <ul class="horizontal-nav">
-                            <li class="nav-item"><a href="/">My Work</a></li>
-                            <li class="nav-item"><a href="/about.html">About</a></li>
-                            <li class="nav-item"><a href="/contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="wide-container flex-space-between">
+                <h1 style="color: var(--colour-content)">Rogan Johnston</h1>
+                <nav>
+                    <ul class="flex">
+                        <li><a href="/">My Work</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         `;
+        this.classList.add("flex");
+
         this.highlightCurrentPage();
     }
 

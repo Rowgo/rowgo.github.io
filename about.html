@@ -5,13 +5,12 @@
         <link rel="stylesheet" href="css/style-base.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="flex-column">
         <!--Header-->
         <header is="site-header"></header>
-        <div class="content-container">
-            <use href="#header"/>
-            <h1>About</h1>
-            <div>
+        <main class="narrow-container flex-column item-center">
+            <section>
+                <h1>About</h1>
                 <p>
                     When I was a kid my three brothers and I would play games in the basement of my child hood home, so often we would have a full four players.
                     During that time I found the first job I wanted to have when I got older, being a 'game maker'. 
@@ -27,35 +26,22 @@
                     Now that I've graduated I'm learning how to create online multiplayer games using Unreal Engine. 
                     I hope that learning to make games will help me better understand what play is, the ways we as designers can facilitate it, and how it can make the world a better place.
                 </p>
-            </div>
+            </section>
             <hr>
-            <div class="flex-space-around" target="_blank">
-                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
-                    <use href="/media/sprites/tool-icons.svg#icon-godot"/>
-                </svg>
+            <section>
+                <div class="flex-space-around" target="_blank">
+                    <svg class="icon"><use href="media/sprites/tool-icons.svg#icon-godot"/></svg>    
+                    <svg class="icon"><use href="media/sprites/tool-icons.svg#icon-unity"/></svg>    
+                    <svg class="icon"><use href="media/sprites/tool-icons.svg#icon-unreal"/></svg>    
+                    <svg class="icon"><use href="media/sprites/tool-icons.svg#icon-blender"/></svg>    
+                    <svg class="icon"><use href="media/sprites/tool-icons.svg#icon-inkscape"/></svg>                
+                </div>
+            </section>
+        </main>
 
-                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
-                    <use href="/media/sprites/tool-icons.svg#icon-unity"/>
-                </svg>
-
-                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
-                    <use href="/media/sprites/tool-icons.svg#icon-unreal"/>
-                </svg>
-
-                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
-                    <use href="/media/sprites/tool-icons.svg#icon-blender"/>
-                </svg>
-
-                <svg style="color: var(--colour-content); width: 100px; height: 100px;">
-                    <use href="/media/sprites/tool-icons.svg#icon-inkscape"/>
-                </svg>
-            </div>
-        </div>
         <footer is="site-footer"></footer>
 
         <!--Java Script-->
-        <script src="/scripts/html-generator.js"></script>
-        <script src="/scripts/styler.js"></script>
         <script tpye="module" src="/scripts/header.js"></script>
         <script type="module" src="/scripts/footer.js"></script>
     </body>

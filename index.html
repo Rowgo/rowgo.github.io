@@ -7,38 +7,53 @@
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body class="flex-column">
         <!--Header-->
         <header is="site-header"></header>
 
-        <div class="container-portfolio">
-            <h1>Projects</h1>
-            <centered-grid>
-                <a class="card" href="/project-pages/project-villainous-delivery.html">
-                    <img src="/media/villanous-delivery/villianous-delivery-card.jpg" alt="">
-                    Villainous Delivery
-                </a>
-                <a class="card" href="/project-pages/project-tipsy-turtles.html">
-                    <img src="/media/tipsy-turtles/tipsy-turtles-logo.jpg" alt="">
-                    Tipsy Turtles
-                </a>
-                <a class="card" href="/project-pages/project-battle-starz.html">
-                    <img src="/media/battle-starz/battlestarz-logo.jpg" alt="">
-                    Battle Starz
-                </a>
-            </centered-grid>
+        <main class="wide-container flex-column item-center">
+            <section>
+                <h1>Projects</h1>
+                <centered-grid>
+                    <div>
+                        <a class="flex-column margin " href="project-pages/project-villainous-delivery.html">
+                            <img class="border item-center" src="media/villanous-delivery/villianous-delivery-card.jpg" alt="">
+                            Villainous Delivery
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column margin" href="project-pages/project-tipsy-turtles.html">
+                            <img class="border item-center" src="media/tipsy-turtles/tipsy-turtles-logo.jpg" alt="">
+                            Tipsy Turtles
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column margin" href="project-pages/project-battle-starz.html">
+                            <img class="border item-center" src="media/battle-starz/battlestarz-logo.jpg" alt="">
+                            Battle Starz
+                        </a>
+                    </div>
+                </centered-grid>
+            </section>
             <hr>
-            <h1>My Current Project</h1>
-            <centered-grid>
-                <a class="card" href="project-page.html">
-                    <img src="/media/loading-card.gif" alt="">
-                    King of Snowball Mountain
-                </a>
-            </centered-grid>
-        </div>
+            <section>
+                <h1>My Current Project</h1>
+                <centered-grid>
+                    <div>
+                        <a class="flex-column margin"  href="project-page.html">
+                            <img class="border item-center" src="media/loading-card.gif" alt="">
+                            King of Snowball Mountain
+                        </a>
+                    </div>
+                </centered-grid>
+            </section>
+        </main>
+
+        <footer is="site-footer"></footer>
 
         <!--Java Script-->
-        <script tpye="module" src="/scripts/header.js"></script>
-        <script type="module" src="/scripts/grid.js"></script>
+        <script tpye="module" src="scripts/header.js"></script>
+        <script type="module" src="scripts/grid.js"></script>
+        <script type="module" src="scripts/footer.js"></script>
     </body>
  </html>

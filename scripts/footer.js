@@ -3,8 +3,9 @@
 class Footer extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
-            <p class="wide-container no-margin-block"> &copy 2025 Rogan Johnston | All Rights Reserved </p>
+            <p class="wide-container"> &copy 2025 Rogan Johnston | All Rights Reserved </p>
         `
+        this.classList.add('flex')
     }
 }
 

@@ -6,52 +6,54 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="styles/twitch-styles.css">
         <style>
-
+            .icon {
+                width: calc(6.25rem);
+                height: calc(6.25rem);
+            }
         </style>
     </head>
-    <body>
+    <body class="flex-column">
         <!--Header-->
         <header is="site-header"></header>
             
-        <h1> My Stream </h1>
-        <div class="twitch-embed">
-            <div id="twitch-player" class="twitch-stream"></div>
-            <iframe
-                id="twitch-chat"
-                class="twitch-chat"
-                src="https://www.twitch.tv/embed/rowgabear/chat?parent=roganjohnston.com"
-                frameborder="0">
-            </iframe>
-        </div>
-
-        <div class="content-container">
-            <p>
-                I stream on twitch every ___day at __M PST. If I'm streaming right now feel free to ask me anything in the twitch chat.
-            </p>
+        <main class="wide-container flex-column item-center">
+            <section>
+                <h1> My Stream </h1>
+                <div class="twitch-embed">
+                    <div id="twitch-player" class="twitch-stream"></div>
+                    <iframe
+                    id="twitch-chat"
+                    class="twitch-chat"
+                    src="https://www.twitch.tv/embed/rowgabear/chat?parent=roganjohnston.com"
+                    frameborder="0">
+                    </iframe>
+                </div>
+                <p> I stream on twitch every ___day at __M PST. If I'm streaming right now feel free to ask me anything in the twitch chat. </p>
+            </section>
             <hr>
-            <div>
+            <section>
                 <h1> My Socials </h1>
                 <div class="flex-space-around">
-                    <a href="https://www.youtube.com/@roganjohnston" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon">
-                            <use href="/media/sprites/socials-icons.svg#icon-youtube"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.twitch.tv/rowgabear" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon"><use href="/media/sprites/socials-icons.svg#icon-twitch"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/roganjohnston/" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon">
-                            <use href="/media/sprites/socials-icons.svg#icon-linkedin"/>
-                        </svg>
-                    </a>
+                    <div>
+                        <a href="https://www.youtube.com/@roganjohnston" target="_blank" rel="noopener noreferrer">
+                            <svg class="border-circle icon"><use href="media/sprites/socials-icons.svg#icon-youtube"/></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.twitch.tv/rowgabear" target="_blank" rel="noopener noreferrer">
+                            <svg class="border-circle icon"><use href="media/sprites/socials-icons.svg#icon-twitch"/></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/roganjohnston/" target="_blank" rel="noopener noreferrer">
+                            <svg class="border-circle icon"><use href="media/sprites/socials-icons.svg#icon-linkedin"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <p>
-                    If I'm not streaming right now you can contact me through my email or on linkedin. or if you want to see what I'm up to, check out my youtube channel.
-                </p>
-            </div>
-        </div>
+            </section>
+        </main>
         <footer is="site-footer"></footer>
+
         <div class="twitch-embed">
             
         </div>

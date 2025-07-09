@@ -52,7 +52,7 @@ class Grid extends HTMLElement {
         for (let i = 0; i < gridItems.length; i++){
             let item = gridItems[i];
             item.style.gridArea = null;
-            item.style.width = null;
+            item.style.maxWidth = null;
         }
     }
 
@@ -75,11 +75,11 @@ class Grid extends HTMLElement {
 
             const row = Math.ceil(gridItems.length / columnCount)
 
-            const width = 100 / columnCount;
+            const columnWidth = 100 / columnCount;
 
             const item = gridItems[gridItems.length - remainingItems + i];
             item.style.gridArea = `${row} / ${columnStart} / auto / ${columnEnd}`;
-            item.style.width = `${width}%`;
+            item.style.maxWidth = `${columnWidth}%`;
         }
     }
 

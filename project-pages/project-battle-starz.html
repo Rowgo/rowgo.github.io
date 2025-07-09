@@ -6,15 +6,14 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../styles/video-styles.css">
     </head>
-    <body>
+    <body class="flex-column">
 
         <!--Header-->
         <header is="site-header"></header>
         
         <!-- Page Content -->
-        <div class="content-container">
-            
-            <div>
+        <main class="narrow-container flex-column item-center">
+            <section>
                 <h1>Battle Starz</h1>
                 <p>
                     <!-- Project Description -->
@@ -22,10 +21,10 @@
                     For this project I took on the roles of project manager and level designer.
                 </p>
                 <!-- Porject Overveiw + Reflection Video -->
-                 <iframe src="https://www.youtube.com/embed/SUpJJLV8iyo?si=nnYdclcPgLlW413B" class="video"></iframe>
-            </div>
+                 <iframe class="video margin-v" src="https://www.youtube.com/embed/SUpJJLV8iyo?si=nnYdclcPgLlW413B" ></iframe>
+            </section>
             <hr>
-            <div>
+            <section>
                 <h1>Battle Arena</h1>
                 <p>
                     <!-- To Do: Write Situation Discription Here -->
@@ -39,7 +38,7 @@
                     So when I set out to make the levels for the game I asked myself how I could design the levels to incentivise players 
                     to use the portals in the ways we originally envisioned, and to find new ways to use the protals we hadn't thought of.
                 </p>
-                <img src="/media/battle-starz/level-layout.png" alt="" class="popup-able" >
+                <img class="margin-v" src="../media/battle-starz/level-layout.png" alt="" class="popup-able" >
                 <p>
                     <!-- To Do: Write Action Discription Here -->
                     This is the layout for one of the levels I made. For this level I tried to devide the two starting positions 
@@ -47,7 +46,7 @@
                     This meant that their only really hope of hitting the other player was a hail mary, or using the portals to hit the other player 
                     in a way they weren't expecting.
                 </p>
-                <img src="/media/battle-starz/level-example.gif" alt="" class="popup-able" >
+                <img class="margin-v" src="../media/battle-starz/level-example.gif" alt="" class="popup-able" >
                 <p>
                     <!-- To Do: Write Result Discription Here -->
                     In the end I didn't have the time to iterate on the levels as much as I would have liked. 
@@ -56,53 +55,55 @@
                     from the first draft. It gave a feeling of trying to manage where your opponent could hit you from while trying to figure out which 
                     portal could catch them off guard which I think exemplified the feeling of trick shots that we wanted out game to have.
                 </p>
-            </div>
+            </section>
             <hr>
-            <h1>Collaborators</h1>
-            <centered-grid>
-                <a class="card" href="https://www.linkedin.com/in/samuel-c-english/">
-                    <svg style="width: 200px; height: 200px;">
-                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
-                    </svg>
-                    Sam English
-                    <br>
-                    Programmer
-                </a>
-                <a class="card" href="https://www.linkedin.com/in/nic-seymour/">
-                    <svg style="width: 200px; height: 200px;">
-                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
-                    </svg>
-                    Nic Seymour
-                    <br>
-                    Artist
-                </a>
-                <a class="card" href="www.linkedin.com">
-                    <svg style="width: 200px; height: 200px;">
-                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
-                    </svg>
-                    Steven
-                    <br>
-                    UI Programmer
-                </a>
-                <a class="card" href="https://www.linkedin.com/in/nicholas-perrott-a89471198/">
-                    <svg style="width: 200px; height: 200px;">
-                        <use href="/media/sprites/profile-pictures.svg#placeholder"/>
-                    </svg>
-                    Nick Perott
-                    <br>
-                    QA
-                </a>
-            </centered-grid>
-        </div>
+            <section>
+                <h1>Collaborators</h1>
+                <centered-grid>
+                    <a class="flex-column" href="https://www.linkedin.com/in/samuel-c-english/">
+                        <svg class="border-circle portrait item-center margin">
+                            <use href="../media/sprites/profile-pictures.svg#placeholder"/>
+                        </svg>
+                        Sam English
+                        <br>
+                        Programmer
+                    </a>
+                    <a class="flex-column" href="https://www.linkedin.com/in/nic-seymour/">
+                        <svg class="border-circle portrait item-center margin">
+                            <use href="../media/sprites/profile-pictures.svg#placeholder"/>
+                        </svg>
+                        Nic Seymour
+                        <br>
+                        Artist
+                    </a>
+                    <a class="flex-column" href="www.linkedin.com">
+                        <svg class="border-circle portrait item-center margin">
+                            <use href="../media/sprites/profile-pictures.svg#placeholder"/>
+                        </svg>
+                        Steven
+                        <br>
+                        UI Programmer
+                    </a>
+                    <a class="flex-column" href="https://www.linkedin.com/in/nicholas-perrott-a89471198/">
+                        <svg class="border-circle portrait item-center margin">
+                            <use href="../media/sprites/profile-pictures.svg#placeholder"/>
+                        </svg>
+                        Nick Perott
+                        <br>
+                        QA
+                    </a>
+                </centered-grid>
+            </section>
+        </main>
 
         <footer is="site-footer"></footer>
         <popup-container></popup-container>
 
         <!--Java Script-->        
-        <script type="module" src="/scripts/header.js"></script>
-        <script type="module" src="/scripts/img-popup.js"></script>
-        <script type="module" src="/scripts/grid.js"></script>
-        <script type="module" src="/scripts/footer.js"></script>
+        <script type="module" src="../scripts/header.js"></script>
+        <script type="module" src="../scripts/img-popup.js"></script>
+        <script type="module" src="../scripts/grid.js"></script>
+        <script type="module" src="../scripts/footer.js"></script>
         
         <!--script> populateElement({elementId: "popup-container", filePath: "/templates-html/image-popup.html", callback: bindPopups}) </script-->
     </body>

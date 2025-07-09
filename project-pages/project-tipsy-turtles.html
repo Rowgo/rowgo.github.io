@@ -6,14 +6,14 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../styles/video-styles.css">
     </head>
-    <body>
+    <body class="flex-column">
         
         <!--Header-->
         <header is="site-header"></header>
         
         <!-- Page Content -->
-        <div class="content-container">
-            <div>
+        <main class="narrow-container flex-column item-center">
+            <section>
                 <h1>Tipsy Turtles</h1>
                 <p>
                     <!-- Project Description -->
@@ -22,10 +22,10 @@
                     scripting the visual effects, and documenting the game's core mechanics.
                 </p>
                 <!-- Porject Overveiw + Reflection Video -->
-                 <iframe src="https://www.youtube.com/embed/57BdxKt_m-8?si=9HCWvd7HEr2WQfnF" class="video"></iframe>
-            </div>
+                 <iframe class="video margin-v" src="https://www.youtube.com/embed/57BdxKt_m-8?si=9HCWvd7HEr2WQfnF"></iframe>
+            </section>
             <hr>
-            <div>
+            <section>
                 <h1>Fish Bowl UI</h1>
                 <p>
                     <!-- To Do: Write Situation Discription Here -->
@@ -40,7 +40,7 @@
                     but if the fishbowl ran out of water they would have to go back to the last check point. 
                     I was tasked with designing and implimenting the UI and gameplay for both the fishbowl and check points.
                 </p>
-                <img src="/media/tipsy-turtles/fishbowl-firstdraft.gif" alt="" class="popup-able" >
+                <img class="margin-v" src="../media/tipsy-turtles/fishbowl-firstdraft.gif" alt="" class="popup-able" >
                 <p>
                     <!-- To Do: Write Action Discription Here -->
                     For the UI I decided to make it diagetic. Since the fishbowl was going to be an object that was constantly in the players veiw port
@@ -56,7 +56,7 @@
                      allow the refill volume's size to be dictaded by gameplay and not art I designed the water to look like a leak springing from the pipe because of 
                      entropy.
                 </p>
-                <img src="/media/tipsy-turtles/fishbowl-final.gif" alt="" class="popup-able" >
+                <img class="margin-v" src="../media/tipsy-turtles/fishbowl-final.gif" alt="" class="popup-able" >
                 <p>
                     <!-- To Do: Write Result Discription Here -->
                     During the begining of the project players rarely noticed the fishbowl, 
@@ -67,56 +67,70 @@
                     I feel the decision to do diagetic UI really gave us the oppurtuinty to inject a lot of personality into the fish's character and 
                     have players connect with the game more as a result.
                 </p>
-            </div>
+            </section>
             <hr>
-            <h1>Collaborators</h1>
-            <centered-grid>
-                <a class="card" href="https://www.linkedin.com/in/samuel-c-english/">
-                    <img src="/media/profile-picture-placeholder.png">
-                    Sam English
-                    <br>
-                    Programmer
-                </a>
-                <a class="card" href="https://www.linkedin.com/in/erin-beardy/">
-                    <img src="/media/profile-picture-placeholder.png">
-                    Erin Beardy
-                    <br>
-                    Level Designer
-                </a>
-                <a class="card" href="https://www.linkedin.com/in/im-mim-daigle-hi/">
-                    <img src="/media/profile-picture-placeholder.png">
-                    Emelie D'aigle
-                    <br>
-                    Character Artist
-                </a>
-                <a class="card" href="https://www.linkedin.com/in/jaylonhan/">
-                    <img src="/media/profile-picture-placeholder.png">
-                    Jaylon Han
-                    <br>
-                    Envioronment Artist
-                </a>
-                <a class="card" href="www.linkedin.com">
-                    <img src="/media/profile-picture-placeholder.png">
-                    Jared
-                    <br>
-                    MX/SFX Artist
-                </a>
-                <a class="card" href="https://www.linkedin.com/in/sysaldsound/">
-                    <img src="/media/profile-picture-placeholder.png">
-                    Samantha Sun
-                    <br>
-                    SFX Artist
-                </a>
-            </centered-grid>      
-        </div>
+            <section>
+                <h1>Collaborators</h1>
+                <centered-grid>
+                    <div>
+                        <a class="flex-column" href="https://www.linkedin.com/in/samuel-c-english/">
+                            <svg class="border-circle portrait item-center margin"><use href="../media/sprites/profile-pictures.svg#placeholder"/></svg>
+                            Sam English
+                            <br>
+                            Programmer
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column" href="https://www.linkedin.com/in/erin-beardy/">
+                            <svg class="border-circle portrait item-center margin"><use href="../media/sprites/profile-pictures.svg#placeholder"/></svg>
+                            Erin Beardy
+                            <br>
+                            Level Designer
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column" href="https://www.linkedin.com/in/im-mim-daigle-hi/">
+                            <svg class="border-circle portrait item-center margin"><use href="../media/sprites/profile-pictures.svg#placeholder"/></svg>
+                            Emelie D'aigle
+                            <br>
+                            Character Artist
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column" href="https://www.linkedin.com/in/jaylonhan/">
+                            <svg class="border-circle portrait item-center margin"><use href="../media/sprites/profile-pictures.svg#placeholder"/></svg>
+                            Jaylon Han
+                            <br>
+                            Envioronment Artist
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column" href="www.linkedin.com">
+                            <svg class="border-circle portrait item-center margin"><use href="../media/sprites/profile-pictures.svg#placeholder"/></svg>
+                            Jared
+                            <br>
+                            MX/SFX Artist
+                        </a>
+                    </div>
+                    <div>
+                        <a class="flex-column" href="https://www.linkedin.com/in/sysaldsound/">
+                            <svg class="border-circle portrait item-center margin"><use href="../media/sprites/profile-pictures.svg#placeholder"/></svg>
+                            Samantha Sun
+                            <br>
+                            SFX Artist
+                        </a>
+                    </div>
+                </centered-grid>      
+            </section>    
+        </main>
         
         <footer is="site-footer"></footer>
         <popup-container></popup-container>
         
         <!--Java Script-->
-        <script tpye="module" src="/scripts/header.js"></script>
-        <script type="module" src="/scripts/img-popup.js"></script>
-        <script type="module" src="/scripts/grid.js"></script>
-        <script type="module" src="/scripts/footer.js"></script>
+        <script tpye="module" src="../scripts/header.js"></script>
+        <script type="module" src="../scripts/img-popup.js"></script>
+        <script type="module" src="../scripts/grid.js"></script>
+        <script type="module" src="../scripts/footer.js"></script>
     </body>
 </html> 
