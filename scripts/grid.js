@@ -22,17 +22,12 @@ document.adoptedStyleSheets = [
 class Grid extends HTMLElement {
     // made this web component just so I could get the last row on my grids centered
     constructor(){
-    //
         super();
         //create event handler
         this._eventHandler = this.onMediaEvent.bind(this);
     }
     connectedCallback(){
         this.mediaMatch = window.matchMedia("(max-width: 800px)");
-
-        // get columns as attributes
-        // create media query events
-        // bind the event to center last grid row function
         this.mediaMatch.addEventListener("change", this._eventHandler);
         this._eventHandler(this.mediaMatch);
     }
@@ -56,7 +51,6 @@ class Grid extends HTMLElement {
         }
     }
 
-    //center last grid row
     centerLastRow(){
         const gridItems = this.children;
         const totalItems = gridItems.length;
@@ -79,7 +73,7 @@ class Grid extends HTMLElement {
 
             const item = gridItems[gridItems.length - remainingItems + i];
             item.style.gridArea = `${row} / ${columnStart} / auto / ${columnEnd}`;
-            item.style.maxWidth = `${columnWidth}%`;
+            item.style.maxWidth = `${columnWidth}%`; // this is so that all the items stay the same size on the grid.
         }
     }
 
