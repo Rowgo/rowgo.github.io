@@ -4,13 +4,6 @@
     <head>
         <link rel="stylesheet" href="css/style-base.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="styles/twitch-styles.css">
-        <style>
-            .icon {
-                width: calc(6.25rem);
-                height: calc(6.25rem);
-            }
-        </style>
     </head>
     <body class="flex-column">
         <!--Header-->
@@ -19,15 +12,7 @@
         <main class="wide-container flex-column item-center">
             <section>
                 <h1> My Stream </h1>
-                <div class="twitch-embed">
-                    <div id="twitch-player" class="twitch-stream"></div>
-                    <iframe
-                    id="twitch-chat"
-                    class="twitch-chat"
-                    src="https://www.twitch.tv/embed/rowgabear/chat?parent=roganjohnston.com"
-                    frameborder="0">
-                    </iframe>
-                </div>
+                <twitch-embed channel="rowgabear" parent="roganjohnston.com"></twitch-embed>
                 <p> I stream on twitch every ___day at __M PST. If I'm streaming right now feel free to ask me anything in the twitch chat. </p>
             </section>
             <hr>
@@ -54,35 +39,10 @@
         </main>
         <footer is="site-footer"></footer>
 
-        <div class="twitch-embed">
-            
-        </div>
+
         <!--Java Script-->
-        <script src="/scripts/html-generator.js"></script>
-        <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-        <script src="/scripts/styler.js"></script>
         <script tpye="module" src="/scripts/header.js"></script>
         <script type="module" src="/scripts/footer.js"></script>
-        <script type="text/javascript">
-            var options = {
-                width: "100%",
-                height: "100%",
-                channel: "rowgabear",
-                parent: ["roganjohnston.com"],
-            };
-            var player = new Twitch.Player("twitch-player", options);
-            player.setVolume(0.5);
-
-            player.addEventListener(Twitch.Player.ONLINE, function() {
-                console.log("Playing");
-                document.getElementById("twitch-player").style.borderColor = "var(--colour-accent)";
-                document.getElementById("twitch-chat").style.borderColor = "var(--colour-accent)";
-            });
-            player.addEventListener(Twitch.Player.OFFLINE, function() {
-                console.log("Offline");
-                document.getElementById("twitch-player").style.borderColor = "var(--colour-content)";
-                document.getElementById("twitch-chat").style.borderColor = "var(--colour-content)";
-            });
-        </script>
+        <script type="module" src="scripts/twitch-embed.js"></script>
     </body>
 </html>
