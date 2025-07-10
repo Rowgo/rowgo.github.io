@@ -1,8 +1,53 @@
 // Copyright (C) Rogan Johnston 2025 all rights reserved
+const componentStyles = new CSSStyleSheet();
+componentStyles.replaceSync(
+    ` 
+        twitch-embed {
+            display : flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .twitch-player {
+            border: var(--line-thickness) solid var(--colour-content);
+            width: 100%;
+            max-width: 720px;
+            min-width: 400px;  
+            height: auto;
+            max-height: 480px;
+            min-height: 300px;
+            aspect-ratio: 3/2;
+        }
+        .twitch-chat {
+            border: var(--line-thickness) solid var(--colour-content);
+            border-left: 0px;
+            width: 350px;
+            height: 480px;
+        }
+        @media screen and (max-width: 1200px) {
+            twitch-embed {
+                flex-direction: column;
+            }
+            .twitch-chat{
+                max-width: 720px;
+                width: 100%;
+                height: 300px;
+                border: var(--line-thickness) solid var(--colour-accent);
+                border-top: 0px;
+            }
+        }
+    `
+);
+
+document.adoptedStyleSheets = [
+    ...document.adoptedStyleSheets,
+    componentStyles
+];
+
 const template = document.createElement('template');
 template.innerHTML = `
-    <div id="twitch-player"></div>
-    <div id="twitch-chat"></div>
+    <div class="twitch-player" id="twitch-player"></div>
+    <div class="twitch-chat" id="twitch-chat"></div>
 `;
 
 class TwitchEmbed extends HTMLElement {
@@ -21,13 +66,6 @@ class TwitchEmbed extends HTMLElement {
         document.head.appendChild(script);
         
         this.initChat();
-
-        const style = document.createElement("link");
-        style.rel = "stylesheet";
-        style.href = "/css/twitch-style.css";
-        document.head.appendChild(style);
-
-        this.styleElements();
     }
 
     initPlayer(){
@@ -61,13 +99,6 @@ class TwitchEmbed extends HTMLElement {
             width="100%">
             </iframe>
         `;
-    }
-
-    styleElements(){
-        const playerElement = document.getElementById("twitch-player");
-        playerElement.classList.add("twitch-player");
-        const chatElement = document.getElementById("twitch-chat");
-        chatElement.classList.add("twitch-chat");
     }
 }
 
