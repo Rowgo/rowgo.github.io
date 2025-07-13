@@ -3,7 +3,7 @@
 /* Layout Components */
 .wide-container {
     display: flex;
-    flex-grow: 1;
+    width: 100%;
     max-width: 1200px;
     margin-left: var(--base-spacing);
     margin-right: var(--base-spacing);
@@ -11,7 +11,7 @@
 
 .narrow-container {
     display: flex;
-    flex-grow: 1;
+    width: 100%;
     max-width: 960px;
     margin-left: var(--base-spacing);
     margin-right: var(--base-spacing);
