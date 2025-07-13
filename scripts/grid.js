@@ -69,7 +69,7 @@ class Grid extends HTMLElement {
 
             const row = Math.ceil(gridItems.length / columnCount)
 
-            const columnWidth = 100 / columnCount;
+            const columnWidth = 100 / (columnEnd - columnStart); // the width of the parent is actually the width of the span that the item is in not the row width.
 
             const item = gridItems[gridItems.length - remainingItems + i];
             item.style.gridArea = `${row} / ${columnStart} / auto / ${columnEnd}`;
