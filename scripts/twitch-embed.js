@@ -2,13 +2,13 @@
 const componentStyles = new CSSStyleSheet();
 componentStyles.replaceSync(
     ` 
-        twitch-embed {
+        twitch-embed{
             display : flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
-        .twitch-player {
+        .twitch-player{
             border: var(--line-thickness) solid var(--colour-content);
             width: 100%;
             max-width: 720px;
@@ -18,14 +18,14 @@ componentStyles.replaceSync(
             min-height: 300px;
             aspect-ratio: 3/2;
         }
-        .twitch-chat {
+        .twitch-chat{
             border: var(--line-thickness) solid var(--colour-content);
             border-left: 0px;
             width: 350px;
             height: 480px;
         }
         @media screen and (max-width: 1200px) {
-            twitch-embed {
+            twitch-embed{
                 flex-direction: column;
             }
             .twitch-chat{
