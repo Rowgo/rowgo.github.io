@@ -1,7 +1,7 @@
 /* Copyright (C) 2025 Rogan Johnston all rights reserved */
 
 /* Layout Components */
-.wide-container {
+.wide-container{
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -9,7 +9,7 @@
     margin-right: var(--base-spacing);
 }
 
-.narrow-container {
+.narrow-container{
     display: flex;
     width: 100%;
     max-width: 960px;
@@ -17,7 +17,7 @@
     margin-right: var(--base-spacing);
 }
 
-.inline-link {
+.inline-link{
     text-decoration:underline;
     text-align: inherit;
     font-family: inherit;
@@ -27,12 +27,12 @@
     color: inherit;
 }
 
-.icon {
+.icon{
     width: calc(6.25rem);
     height: calc(6.25rem);
 }
 
-.portrait {
+.portrait{
     width: 200px;
     height: 200px;
 }
@@ -47,21 +47,25 @@
 }
 
 /* Utility Classes */
-.flex { display: flex; justify-content: center; }
-.flex-stretch { display: flex; align-items: stretch;}
-.flex-space-between { display: flex; justify-content: space-between; }
-.flex-space-around { display: flex; justify-content: space-around; }
-.flex-column { display: flex; flex-direction: column;  justify-content: flex-start;}
+.flex{ display: flex; justify-content: center; }
+.flex-stretch{ display: flex; align-items: stretch; }
+.flex-space-between{ display: flex; justify-content: space-between; }
+.flex-space-around{ display: flex; justify-content: space-around; }
+.flex-column{ display: flex; flex-direction: column;  justify-content: flex-start; }
 
-.item-center {align-self: center;}
-.item-left {float: left;}
-.item-right { float: right;}
+.item-center{ align-self: center; }
+.item-left{ float: left; }
+.item-right{ float: right; }
 
-.margin { margin: var(--base-spacing); }
-.margin-v { margin-top: var(--base-spacing); margin-bottom: var(--base-spacing);}
+.margin{ margin: var(--base-spacing); }
+.margin-v{ margin-top: var(--base-spacing); margin-bottom: var(--base-spacing); }
 
-.border, .border-circle{ border: var(--line-thickness) solid var(--colour-content);  box-sizing: border-box;}
-.border-circle { border-radius: 50%; }
-a:hover .border, a:hover .border-circle{ border: var(--line-thickness) solid var(--colour-accent);}
+.text-center{ text-align: center; }
+.text-left{ text-align: left; }
+.text-right{ text-align: right; }
 
-.debug { border: 1px dashed green; }
+.border, .border-circle{ border: var(--line-thickness) solid var(--colour-content);  box-sizing: border-box; }
+.border-circle{ border-radius: 50%; }
+a:hover .border, a:hover .border-circle{ border: var(--line-thickness) solid var(--colour-accent); }
+
+.debug{ border: 1px dashed green; }
