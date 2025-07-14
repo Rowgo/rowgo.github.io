@@ -17,6 +17,16 @@
     margin-right: var(--base-spacing);
 }
 
+.inline-link {
+    text-decoration:underline;
+    text-align: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
 .icon {
     width: calc(6.25rem);
     height: calc(6.25rem);
