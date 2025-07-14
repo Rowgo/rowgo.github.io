@@ -25,6 +25,10 @@ body {
     color: var(--colour-content);
 }
 
+main {
+    flex-grow: 1;
+}
+
 header {
     border-bottom: var(--line-thickness) solid var(--colour-content);
     padding-bottom: var(--base-spacing);
