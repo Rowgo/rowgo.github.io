@@ -4,7 +4,7 @@
 .wide-container{
     display: flex;
     width: 100%;
-    max-width: 1286px;
+    max-width: 1200px;
     margin-left: var(--base-spacing);
     margin-right: var(--base-spacing);
 }
@@ -12,7 +12,7 @@
 .narrow-container{
     display: flex;
     width: 100%;
-    max-width: 860px;
+    max-width: 866px;
     margin-left: var(--base-spacing);
     margin-right: var(--base-spacing);
 }
