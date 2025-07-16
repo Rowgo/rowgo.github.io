@@ -51,7 +51,7 @@
 .flex-stretch{ display: flex; align-items: stretch; }
 .flex-space-between{ display: flex; justify-content: space-between; }
 .flex-space-around{ display: flex; justify-content: space-around; }
-.flex-column{ display: flex; flex-direction: column;  justify-content: flex-start; }
+section, .flex-column{ display: flex; flex-direction: column;  justify-content: flex-start; }
 
 .item-center{ align-self: center; }
 .item-left{ float: left; }
