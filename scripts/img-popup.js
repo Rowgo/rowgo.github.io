@@ -33,6 +33,7 @@ componentStyles.replaceSync(
         .popup-content{
             display: flex;
             position: relative;
+            margin: auto;
             max-width: 90%;
         }
         .popup-able{
