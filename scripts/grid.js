@@ -37,7 +37,7 @@ class Grid extends HTMLElement {
         this.classList.remove('small-grid');
         this.removeCenteredStyles();
 
-        if(event.matches) {
+        if (event.matches) {
             this.classList.add('small-grid');
         }
         this.centerLastRow();

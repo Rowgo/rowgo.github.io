@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
-:root {
+:root{
     --base-spacing: 16px;
     --line-thickness: 3px;
     --font-primary: 'Poppins', arial, sans-serif;
@@ -12,11 +12,11 @@
     --colour-accent: #BD5555;
 }
 
-* { margin: 0; }
+*{ margin: 0; }
 
-html { scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; }
 
-body {
+body{
     min-height: 100vh;
     font-family: var(--font-primary);
     font-size: 100%;
@@ -25,33 +25,33 @@ body {
     color: var(--colour-content);
 }
 
-main {
+main{
     flex-grow: 1;
 }
 
-header {
+header{
     border-bottom: var(--line-thickness) solid var(--colour-content);
     padding-bottom: var(--base-spacing);
     padding-top: var(--base-spacing);
     margin-bottom: 1em;
 }
 
-nav { align-self: end; }
-nav li:not(:last-child) { margin-right: 2em; }
+nav{ align-self: end; }
+nav li:not(:last-child){ margin-right: 2em; }
 
-ul, ol { list-style: none; }
+ul, ol{ list-style: none; }
 
-footer {
+footer{
     border-top: var(--line-thickness) solid var(--colour-content);
     padding-top: calc(1.5 * var(--base-spacing));
     padding-bottom: calc(1.5 * var(--base-spacing));
     margin-top: calc(4 * var(--base-spacing));
 }
 
-section h1, section p { margin-block: 1rem; }
+section h1, section p{ margin-block: 1rem; }
 
 /* Text Elements */
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5{
     text-align: center;
     font-family: var(--font-secondary);
     font-weight: 900;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5 {
     color: var(--colour-accent);
 }
 
-p {
+p{
     text-align: left;
     font-family: var(--font-primary);
     font-size: 1.125em;
@@ -73,16 +73,16 @@ a{
     text-decoration: none;
     color: var(--colour-content);
 }
-a:hover, .active { color: var(--colour-accent); }
+a:hover, .active{ color: var(--colour-accent); }
 
 /* Media Elements */
-img {
+img{
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-hr {
+hr{
     border: 0px;
     border-top: var(--line-thickness) solid var(--colour-content);
     margin-top: calc(2 * var(--base-spacing));

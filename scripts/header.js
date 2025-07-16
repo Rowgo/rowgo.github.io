@@ -19,7 +19,7 @@ class SiteHeader extends HTMLElement {
         this.highlightCurrentPage();
     }
 
-    highlightCurrentPage() {
+    highlightCurrentPage(){
         const currentUrl = window.location.pathname;
         const navAnchors = this.querySelectorAll('.nav-item a');
         
