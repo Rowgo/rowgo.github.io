@@ -23,9 +23,9 @@ class Grid extends HTMLElement {
     // made this web component just so I could get the last row on my grids centered
     constructor(){
         super();
-        //create event handler
-        this._eventHandler = this.onMediaEvent.bind(this);
+        this._eventHandler = this.onMediaEvent.bind(this); // this line ensures that when the function uses 'this' as a keyword it referes to the web component class and not the event.
     }
+
     connectedCallback(){
         this.mediaMatch = window.matchMedia("(max-width: 800px)");
         this.mediaMatch.addEventListener("change", this._eventHandler);
@@ -42,6 +42,7 @@ class Grid extends HTMLElement {
         }
         this.centerLastRow();
     }
+
     removeCenteredStyles(){
         const gridItems = this.children;
         for (let i = 0; i < gridItems.length; i++){
@@ -78,8 +79,7 @@ class Grid extends HTMLElement {
     }
 
     disconnectedCallback(){
-        this.phoneMedia.removeEventListener("change", this._eventHandler);
-        this.tabletMedia.removeEventListener("change", this._eventHandler);
+        this.mediaMatch.removeEventListener("change", this._eventHandler);
     }
 }
 
