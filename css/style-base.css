@@ -36,8 +36,8 @@ header{
     margin-bottom: 1em;
 }
 
-nav{ align-self: end; }
-nav li:not(:last-child){ margin-right: 2em; }
+nav{ align-self: center;}
+nav li:not(:last-child){ margin-right: 2em;}
 
 ul, ol{ list-style: none; }
 
