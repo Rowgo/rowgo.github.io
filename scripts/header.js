@@ -1,9 +1,14 @@
 // Copyright (C) Rogan Johnston 2025 all rights reserved
 
 class SiteHeader extends HTMLElement {
+    constructor(){
+        super();
+
+        this._eventHandler = this.onMediaEvent.bind(this);
+    }
     connectedCallback(){
         this.innerHTML = `
-            <div class="wide-container flex-space-between">
+            <div class="wide-container flex-column">
                 <h1 style="color: var(--colour-content)">Rogan Johnston</h1>
                 <nav>
                     <ul class="flex">
@@ -17,6 +22,10 @@ class SiteHeader extends HTMLElement {
         this.classList.add("flex");
 
         this.highlightCurrentPage();
+
+        this.mediaMatch = window.matchMedia("(min-width: 800px)");
+        this.mediaMatch.addEventListener("change", this._eventHandler);
+        this._eventHandler(this.mediaMatch);
     }
 
     highlightCurrentPage(){
@@ -30,6 +39,18 @@ class SiteHeader extends HTMLElement {
                 anchor.classList.add('active');
             }
         });
+    }
+
+    onMediaEvent(event){
+        const wrapper = this.querySelector('div');
+        if (event.matches) {
+            wrapper.classList.remove('flex-column');
+            wrapper.classList.add('flex-space-between');
+        }
+        else {
+            wrapper.classList.remove('flex-space-between');
+            wrapper.classList.add('flex-column');
+        }
     }
 }
 
