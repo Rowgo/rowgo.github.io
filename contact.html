@@ -12,37 +12,35 @@
         <!--Header-->
         <header is="site-header"></header>
             
-        <main class="wide-container flex-column item-center">
+        <main class="wide-container flex-column center-v">
             <section>
                 <h1> My Stream </h1>
                 <twitch-embed channel="rowgabear" parent="roganjohnston.com"></twitch-embed>
-                <p class="text-center"> I stream on twitch Sat-Wed from 10AM-5PM PST. If I'm streaming right now feel free to send a message in the chat. </p>
+                <p class="text-center"> If I'm streaming right now feel free to send a message in the chat. </p>
             </section>
             <hr>
             <section>
-                <h1> My Socials </h1>
-                <div class="flex-space-around">
-                    <div>
-                        <a href="https://www.youtube.com/@roganjohnston" target="_blank" rel="noopener noreferrer">
-                            <svg class="border-circle icon"><use href="media/sprites/socials-icons.svg#icon-youtube"/></svg>
-                        </a>
+                <h1> Or Email Me </h1>
+                <form class="flex-column center-v" action="https://formspree.io/f/xjkoreog" method="POST">
+                    <div class="flex-column">
+                        <label for="email">
+                            Your email:
+                        </label>
+                        <input id="email" type="email" name="email" placeholder="you@email.com" required>
                     </div>
-                    <div>
-                        <a href="https://www.twitch.tv/rowgabear" target="_blank" rel="noopener noreferrer">
-                            <svg class="border-circle icon"><use href="media/sprites/socials-icons.svg#icon-twitch"/></svg>
-                        </a>
+                    <div class="flex-column">
+                        <label for="message">
+                            Your message:
+                        </label>
+                        <textarea id="message" name="message" rows="5" placeholder="Hey. ;D" required></textarea>
                     </div>
-                    <div>
-                        <a href="https://www.linkedin.com/in/roganjohnston/" target="_blank" rel="noopener noreferrer">
-                            <svg class="border-circle icon"><use href="media/sprites/socials-icons.svg#icon-linkedin"/></svg>
-                        </a>
-                    </div>
-                </div>
+                    <button class="margin" type="submit">Send</button>
+                </form>
             </section>
         </main>
         <footer is="site-footer"></footer>
-
-
+        
+        
         <!--Java Script-->
         <script tpye="module" src="/scripts/header.js"></script>
         <script type="module" src="/scripts/footer.js"></script>

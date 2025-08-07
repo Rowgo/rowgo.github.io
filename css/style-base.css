@@ -8,7 +8,9 @@
     --font-primary: 'Poppins', arial, sans-serif;
     --font-secondary: 'Coustard', georgia, serif;
     --colour-background: #F3F5F6;
+    --colour-background-2: #FFFFFF;
     --colour-content: #292F36;
+    --colour-content-2: #000000; 
     --colour-accent: #BD5555;
 }
 
@@ -66,7 +68,8 @@ p{
     color: var(--colour-content);
 }
 
-a{
+button, a{
+    font-family: var(--font-primary);
     text-align: center;
     font-weight: 500;
     font-size: 1.375em;
@@ -75,6 +78,17 @@ a{
 }
 a:hover, .active{ color: var(--colour-accent); }
 
+button{
+    border: var(--line-thickness) solid var(--colour-content);
+    max-width: 150px;
+    width: 100%;
+    align-self: center;
+    background-color: var(--colour-background);
+}
+button:hover{
+    border-color: var(--colour-accent);
+    color: var(--colour-accent);
+}
 /* Media Elements */
 img{
     max-width: 100%;
@@ -89,3 +103,31 @@ hr{
     margin-bottom: calc(2 * var(--base-spacing));
     width: 100%;
 }
+
+label{
+    font-weight: 500;
+    font-size: 1.375em;
+    margin-top: calc( 0.25 * var(--base-spacing));
+    margin-bottom: calc( 0.25 * var(--base-spacing));
+}
+
+form{
+    width: 66%;
+    min-width: min(100%, 600px);
+}
+
+input, textarea{
+    border: 0px;
+    outline: calc( 1 * var(--line-thickness)) solid var(--colour-content);
+    font: inherit;
+    font-size: 1.125em;
+    color: var(--colour-content);
+    background-color: var(--colour-background);
+    box-sizing: border-box;
+    margin-bottom: var(--base-spacing);
+    padding: calc(0.5 * var(--base-spacing));
+}
+input:focus, textarea:focus{
+    outline: calc( 1 * var(--line-thickness)) solid var(--colour-accent);
+}
+

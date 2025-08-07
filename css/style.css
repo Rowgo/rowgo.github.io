@@ -32,8 +32,18 @@
 .icon{
     width: 100%;
     height: auto;
+    vertical-align: middle;
     max-width: calc(6.25rem);
     max-height: calc(6.25rem);
+    aspect-ratio: 1/1;
+}
+.icon-small{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    max-width: calc(3.125rem);
+    max-height: calc(3.125rem);
+    aspect-ratio: 1/1;
 }
 
 .portrait{
@@ -58,9 +68,9 @@
 .flex-space-around{ display: flex; justify-content: space-around; }
 section, .flex-column{ display: flex; flex-direction: column;  justify-content: flex-start; }
 
-.item-center{ align-self: center; }
-.item-left{ float: left; }
-.item-right{ float: right; }
+.center-v{ align-self: center; }
+.item-left{ margin-right: auto;}
+.item-right{ margin-left: auto;}
 
 .margin{ margin: var(--base-spacing); }
 .margin-v{ margin-top: var(--base-spacing); margin-bottom: var(--base-spacing); }
@@ -70,7 +80,7 @@ section, .flex-column{ display: flex; flex-direction: column;  justify-content: 
 .text-left{ text-align: left; }
 .text-right{ text-align: right; }
 
-.border, .border-circle{ border: var(--line-thickness) solid var(--colour-content);  box-sizing: border-box; }
+.border, .border-circle{ border: var(--line-thickness) solid var(--colour-content);  box-sizing: border-box;}
 .border-circle{ border-radius: 50%; }
 a:hover .border, a:hover .border-circle{ border: var(--line-thickness) solid var(--colour-accent); }
 
